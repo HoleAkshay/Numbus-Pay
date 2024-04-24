@@ -1,0 +1,3925 @@
+// iso_std_iso_v20022_tech_xsd_cain_003_001_03.proto at 0:0
+syntax = "proto3";
+package financialinitiationv03;
+
+option java_package = "proto.nimbuspay.financialinitiationv03";
+option java_multiple_files = true;
+option java_outer_classname = "FinancialInitiationV03Protos";
+
+message AccountDetails3 {
+  string acct_nm = 1;
+  string acct_tp = 2;
+  string acct_id = 3;
+}
+message Action13 {
+  PartyType20Code dstn = 1;
+  ActionType11Code actn_tp = 2;
+  string othr_actn_tp = 3;
+  Contact6 ctct = 4;
+  repeated AdditionalData1 addtl_data = 5;
+}
+enum ActionDestination1Code {
+  // Default
+  ACTION_DESTINATION1_CODE_UNSPECIFIED = 0;
+  ACTION_DESTINATION1_CODE_FILE = 1;
+  ACTION_DESTINATION1_CODE_MOBL = 2;
+  ACTION_DESTINATION1_CODE_OTHN = 3;
+  ACTION_DESTINATION1_CODE_OTHP = 4;
+  ACTION_DESTINATION1_CODE_PECR = 5;
+  ACTION_DESTINATION1_CODE_POFS = 6;
+}
+enum ActionType10Code {
+  // Default
+  ACTION_TYPE10_CODE_UNSPECIFIED = 0;
+  ACTION_TYPE10_CODE_ACTV = 1;
+  ACTION_TYPE10_CODE_DEAC = 2;
+  ACTION_TYPE10_CODE_DISP = 3;
+  ACTION_TYPE10_CODE_FUPD = 4;
+  ACTION_TYPE10_CODE_PRNT = 5;
+  ACTION_TYPE10_CODE_SNDM = 6;
+}
+enum ActionType11Code {
+  // Default
+  ACTION_TYPE11_CODE_UNSPECIFIED = 0;
+  ACTION_TYPE11_CODE_CNTI = 1;
+  ACTION_TYPE11_CODE_CNIS = 2;
+  ACTION_TYPE11_CODE_CNTA = 3;
+  ACTION_TYPE11_CODE_CNAS = 4;
+  ACTION_TYPE11_CODE_CPTR = 5;
+  ACTION_TYPE11_CODE_CHDV = 6;
+  ACTION_TYPE11_CODE_VIPM = 7;
+  ACTION_TYPE11_CODE_TRCK = 8;
+  ACTION_TYPE11_CODE_TRXR = 9;
+  ACTION_TYPE11_CODE_OTHN = 10;
+  ACTION_TYPE11_CODE_OTHP = 11;
+  ACTION_TYPE11_CODE_SIGN = 12;
+}
+enum ActionType8Code {
+  // Default
+  ACTION_TYPE8_CODE_UNSPECIFIED = 0;
+  ACTION_TYPE8_CODE_APPV = 1;
+  ACTION_TYPE8_CODE_BLCK = 2;
+  ACTION_TYPE8_CODE_CPTR = 3;
+  ACTION_TYPE8_CODE_DCLN = 4;
+  ACTION_TYPE8_CODE_RQID = 5;
+  ACTION_TYPE8_CODE_NDCL = 6;
+  ACTION_TYPE8_CODE_RFRL = 7;
+  ACTION_TYPE8_CODE_OTHN = 8;
+  ACTION_TYPE8_CODE_OTHP = 9;
+  ACTION_TYPE8_CODE_STUA = 10;
+}
+message AddendumData3 {
+  PurchaseIdentifierType1Code purchs_idr_tp = 1;
+  string othr_purchs_idr_tp = 2;
+  string purchs_idr = 3;
+  AdditionalAcceptorData1 addtl_accptr_data = 4;
+  Customer4 cstmr = 5;
+  Sale2 sale = 6;
+  FleetData4 fleet = 7;
+  Invoice2 invc = 8;
+  repeated TravelAgency3 trvl_agcy = 9;
+  PassengerTransport2 pssngr_trnsprt = 10;
+  repeated VehicleRentalService2 vhcl_rntl = 11;
+  repeated Lodging3 ldgg = 12;
+  ShippingData2 shppg_data = 13;
+  TelecomServices2 telecom_svcs = 14;
+  repeated TemporaryServices2 temp_svcs = 15;
+  Instalment4 instlmt = 16;
+  repeated AdditionalData1 addtl_data = 17;
+}
+enum AddendumTaxType2Code {
+  // Default
+  ADDENDUM_TAX_TYPE2_CODE_UNSPECIFIED = 0;
+  ADDENDUM_TAX_TYPE2_CODE_TOTL = 1;
+  ADDENDUM_TAX_TYPE2_CODE_ALMI = 2;
+  ADDENDUM_TAX_TYPE2_CODE_ASNT = 3;
+  ADDENDUM_TAX_TYPE2_CODE_BPTX = 4;
+  ADDENDUM_TAX_TYPE2_CODE_KAPA = 5;
+  ADDENDUM_TAX_TYPE2_CODE_NKAP = 6;
+  ADDENDUM_TAX_TYPE2_CODE_CRTX = 7;
+  ADDENDUM_TAX_TYPE2_CODE_CSTX = 8;
+  ADDENDUM_TAX_TYPE2_CODE_CITX = 9;
+  ADDENDUM_TAX_TYPE2_CODE_COAX = 10;
+  ADDENDUM_TAX_TYPE2_CODE_CPST = 11;
+  ADDENDUM_TAX_TYPE2_CODE_CORT = 12;
+  ADDENDUM_TAX_TYPE2_CODE_COTX = 13;
+  ADDENDUM_TAX_TYPE2_CODE_CUST = 14;
+  ADDENDUM_TAX_TYPE2_CODE_DLTX = 15;
+  ADDENDUM_TAX_TYPE2_CODE_DUTY = 16;
+  ADDENDUM_TAX_TYPE2_CODE_EMIT = 17;
+  ADDENDUM_TAX_TYPE2_CODE_EMUT = 18;
+  ADDENDUM_TAX_TYPE2_CODE_EMET = 19;
+  ADDENDUM_TAX_TYPE2_CODE_EMST = 20;
+  ADDENDUM_TAX_TYPE2_CODE_EMRT = 21;
+  ADDENDUM_TAX_TYPE2_CODE_ENTX = 22;
+  ADDENDUM_TAX_TYPE2_CODE_ESET = 23;
+  ADDENDUM_TAX_TYPE2_CODE_ENVT = 24;
+  ADDENDUM_TAX_TYPE2_CODE_EQUL = 25;
+  ADDENDUM_TAX_TYPE2_CODE_EQTX = 26;
+  ADDENDUM_TAX_TYPE2_CODE_EUTR = 27;
+  ADDENDUM_TAX_TYPE2_CODE_EXEC = 28;
+  ADDENDUM_TAX_TYPE2_CODE_FEXT = 29;
+  ADDENDUM_TAX_TYPE2_CODE_FNST = 30;
+  ADDENDUM_TAX_TYPE2_CODE_FETX = 31;
+  ADDENDUM_TAX_TYPE2_CODE_FVAT = 32;
+  ADDENDUM_TAX_TYPE2_CODE_FVTS = 33;
+  ADDENDUM_TAX_TYPE2_CODE_FIMT = 34;
+  ADDENDUM_TAX_TYPE2_CODE_FSST = 35;
+  ADDENDUM_TAX_TYPE2_CODE_FICA = 36;
+  ADDENDUM_TAX_TYPE2_CODE_FRTX = 37;
+  ADDENDUM_TAX_TYPE2_CODE_FSTX = 38;
+  ADDENDUM_TAX_TYPE2_CODE_FSFT = 39;
+  ADDENDUM_TAX_TYPE2_CODE_FUVT = 40;
+  ADDENDUM_TAX_TYPE2_CODE_GIFT = 41;
+  ADDENDUM_TAX_TYPE2_CODE_GCAT = 42;
+  ADDENDUM_TAX_TYPE2_CODE_GRTX = 43;
+  ADDENDUM_TAX_TYPE2_CODE_HVAT = 44;
+  ADDENDUM_TAX_TYPE2_CODE_HATX = 45;
+  ADDENDUM_TAX_TYPE2_CODE_HSTX = 46;
+  ADDENDUM_TAX_TYPE2_CODE_HWTX = 47;
+  ADDENDUM_TAX_TYPE2_CODE_INHT = 48;
+  ADDENDUM_TAX_TYPE2_CODE_INPO = 49;
+  ADDENDUM_TAX_TYPE2_CODE_LTTX = 50;
+  ADDENDUM_TAX_TYPE2_CODE_FLST = 51;
+  ADDENDUM_TAX_TYPE2_CODE_LITX = 52;
+  ADDENDUM_TAX_TYPE2_CODE_LOCO = 53;
+  ADDENDUM_TAX_TYPE2_CODE_LSTX = 54;
+  ADDENDUM_TAX_TYPE2_CODE_LOCL = 55;
+  ADDENDUM_TAX_TYPE2_CODE_LUTX = 56;
+  ADDENDUM_TAX_TYPE2_CODE_MATX = 57;
+  ADDENDUM_TAX_TYPE2_CODE_METX = 58;
+  ADDENDUM_TAX_TYPE2_CODE_MITX = 59;
+  ADDENDUM_TAX_TYPE2_CODE_MUTX = 60;
+  ADDENDUM_TAX_TYPE2_CODE_MUDE = 61;
+  ADDENDUM_TAX_TYPE2_CODE_COUN = 62;
+  ADDENDUM_TAX_TYPE2_CODE_NATI = 63;
+  ADDENDUM_TAX_TYPE2_CODE_OCTX = 64;
+  ADDENDUM_TAX_TYPE2_CODE_OPTX = 65;
+  ADDENDUM_TAX_TYPE2_CODE_OTHR = 66;
+  ADDENDUM_TAX_TYPE2_CODE_OTHN = 67;
+  ADDENDUM_TAX_TYPE2_CODE_OTHP = 68;
+  ADDENDUM_TAX_TYPE2_CODE_OTTX = 69;
+  ADDENDUM_TAX_TYPE2_CODE_LEVY = 70;
+  ADDENDUM_TAX_TYPE2_CODE_POTX = 71;
+  ADDENDUM_TAX_TYPE2_CODE_PRTX = 72;
+  ADDENDUM_TAX_TYPE2_CODE_PSTX = 73;
+  ADDENDUM_TAX_TYPE2_CODE_PPTX = 74;
+  ADDENDUM_TAX_TYPE2_CODE_PROV = 75;
+  ADDENDUM_TAX_TYPE2_CODE_PHET = 76;
+  ADDENDUM_TAX_TYPE2_CODE_QUST = 77;
+  ADDENDUM_TAX_TYPE2_CODE_ROCI = 78;
+  ADDENDUM_TAX_TYPE2_CODE_RCSB = 79;
+  ADDENDUM_TAX_TYPE2_CODE_RCSD = 80;
+  ADDENDUM_TAX_TYPE2_CODE_ROTX = 81;
+  ADDENDUM_TAX_TYPE2_CODE_RVAT = 82;
+  ADDENDUM_TAX_TYPE2_CODE_ROVI = 83;
+  ADDENDUM_TAX_TYPE2_CODE_SAUT = 84;
+  ADDENDUM_TAX_TYPE2_CODE_SCTX = 85;
+  ADDENDUM_TAX_TYPE2_CODE_SPTX = 86;
+  ADDENDUM_TAX_TYPE2_CODE_STTA = 87;
+  ADDENDUM_TAX_TYPE2_CODE_STAM = 88;
+  ADDENDUM_TAX_TYPE2_CODE_SLST = 89;
+  ADDENDUM_TAX_TYPE2_CODE_SLTX = 90;
+  ADDENDUM_TAX_TYPE2_CODE_SETX = 91;
+  ADDENDUM_TAX_TYPE2_CODE_STPT = 92;
+  ADDENDUM_TAX_TYPE2_CODE_SPTS = 93;
+  ADDENDUM_TAX_TYPE2_CODE_SPFT = 94;
+  ADDENDUM_TAX_TYPE2_CODE_SPTG = 95;
+  ADDENDUM_TAX_TYPE2_CODE_SRTX = 96;
+  ADDENDUM_TAX_TYPE2_CODE_SSTX = 97;
+  ADDENDUM_TAX_TYPE2_CODE_STAT = 98;
+  ADDENDUM_TAX_TYPE2_CODE_STSL = 99;
+  ADDENDUM_TAX_TYPE2_CODE_STEX = 100;
+  ADDENDUM_TAX_TYPE2_CODE_SUTX = 101;
+  ADDENDUM_TAX_TYPE2_CODE_CTAX = 102;
+  ADDENDUM_TAX_TYPE2_CODE_TDDT = 103;
+  ADDENDUM_TAX_TYPE2_CODE_TELT = 104;
+  ADDENDUM_TAX_TYPE2_CODE_THTX = 105;
+  ADDENDUM_TAX_TYPE2_CODE_TRAX = 106;
+  ADDENDUM_TAX_TYPE2_CODE_TRAN = 107;
+  ADDENDUM_TAX_TYPE2_CODE_UNSP = 108;
+  ADDENDUM_TAX_TYPE2_CODE_UUTX = 109;
+  ADDENDUM_TAX_TYPE2_CODE_VATA = 110;
+  ADDENDUM_TAX_TYPE2_CODE_VATB = 111;
+  ADDENDUM_TAX_TYPE2_CODE_WTAX = 112;
+  ADDENDUM_TAX_TYPE2_CODE_WESV = 113;
+  ADDENDUM_TAX_TYPE2_CODE_WITF = 114;
+  ADDENDUM_TAX_TYPE2_CODE_WITL = 115;
+  ADDENDUM_TAX_TYPE2_CODE_WITH = 116;
+  ADDENDUM_TAX_TYPE2_CODE_TNRT = 117;
+}
+message AdditionalAcceptorData1 {
+  string addtl_tx_ref_nb = 1;
+  string tax_regn_id = 2;
+  string corp_tax_id = 3;
+  CorporateTaxType1Code corp_tax_id_tp = 4;
+  repeated AdditionalIdentification1 addtl_id = 5;
+  AdditionalCharacteristics1 chrtcs = 6;
+  string addtl_inf = 7;
+}
+message AdditionalAction1 {
+  ActionType10Code tp = 1;
+  PartyType21Code dstn = 2;
+  string othr_dstn = 3;
+  ActionDestination1Code dstn_tp = 4;
+  string othr_dstn_tp = 5;
+  string dstn_adr = 6;
+  OutputFormat4Code frmt = 7;
+  string othr_frmt = 8;
+  Content1 cntt = 9;
+}
+message AdditionalAmounts3 {
+  string tp = 1;
+  string othr_tp = 2;
+  Amount17 amt = 3;
+  string desc = 4;
+  repeated AdditionalData1 addtl_data = 5;
+}
+message AdditionalCharacteristicDetails1 {
+  string tp = 1;
+  string prvdd_by = 2;
+}
+message AdditionalCharacteristics1 {
+  AdditionalCharacteristicDetails1 biz_tp = 1;
+  AdditionalCharacteristicDetails1 ownr = 2;
+  AdditionalCharacteristicDetails1 certfctn = 3;
+  AdditionalCharacteristicDetails1 ownr_ethncty = 4;
+}
+message AdditionalData1 {
+  string tp = 1;
+  string val = 2;
+}
+message AdditionalFee2 {
+  TypeOfAmount21Code tp = 1;
+  string othr_tp = 2;
+  string fee_prgm = 3;
+  string fee_dscrptr = 4;
+  FeeAmount3 fee_amt = 5;
+  FeeAmount3 fee_rcncltn_amt = 6;
+  string desc = 7;
+  repeated AdditionalData1 addtl_data = 8;
+}
+message AdditionalIdentification1 {
+  AdditionalIdentificationType1Code tp = 1;
+  string othr_tp = 2;
+  string val = 3;
+}
+enum AdditionalIdentificationType1Code {
+  // Default
+  ADDITIONAL_IDENTIFICATION_TYPE1_CODE_UNSPECIFIED = 0;
+  ADDITIONAL_IDENTIFICATION_TYPE1_CODE_OTHP = 1;
+  ADDITIONAL_IDENTIFICATION_TYPE1_CODE_OTHN = 2;
+  ADDITIONAL_IDENTIFICATION_TYPE1_CODE_ICSN = 3;
+  ADDITIONAL_IDENTIFICATION_TYPE1_CODE_ATNU = 4;
+}
+message AdditionalInformation19 {
+  string ntrd_data_nmrc = 1;
+  string ntrd_data_alpha_nmrc = 2;
+  string addtl_data = 3;
+}
+message AdditionalInformation20 {
+  PartyType22Code rcpt = 1;
+  string othr_rcpt = 2;
+  repeated UserInterface6Code trgt = 3 [
+    packed = true
+  ];
+  string othr_trgt = 4;
+  OutputFormat4Code frmt = 5;
+  string othr_frmt = 6;
+  string tp = 7;
+  string val = 8;
+}
+message AdditionalInformation29 {
+  PartyType22Code rcpt = 1;
+  string othr_rcpt = 2;
+  repeated UserInterface6Code trgt = 3 [
+    packed = true
+  ];
+  string othr_trgt = 4;
+  OutputFormat4Code frmt = 5;
+  string othr_frmt = 6;
+  string tp = 7;
+  string lang = 8;
+  string val = 9;
+}
+message AdditionalRiskData1 {
+  string tp = 1;
+  string val = 2;
+}
+message AdditionalService2 {
+  AdditionalServiceType2Code tp = 1;
+  string othr_tp = 2;
+  AdditionalServiceResult1Code rslt = 3;
+  string othr_rslt = 4;
+  repeated AdditionalData1 svc_dtl = 5;
+}
+enum AdditionalServiceResult1Code {
+  // Default
+  ADDITIONAL_SERVICE_RESULT1_CODE_UNSPECIFIED = 0;
+  ADDITIONAL_SERVICE_RESULT1_CODE_NOPF = 1;
+  ADDITIONAL_SERVICE_RESULT1_CODE_NOSP = 2;
+  ADDITIONAL_SERVICE_RESULT1_CODE_OTHN = 3;
+  ADDITIONAL_SERVICE_RESULT1_CODE_OTHP = 4;
+  ADDITIONAL_SERVICE_RESULT1_CODE_PERF = 5;
+}
+enum AdditionalServiceType2Code {
+  // Default
+  ADDITIONAL_SERVICE_TYPE2_CODE_UNSPECIFIED = 0;
+  ADDITIONAL_SERVICE_TYPE2_CODE_CACT = 1;
+  ADDITIONAL_SERVICE_TYPE2_CODE_CSHB = 2;
+  ADDITIONAL_SERVICE_TYPE2_CODE_DCCV = 3;
+  ADDITIONAL_SERVICE_TYPE2_CODE_INTP = 4;
+  ADDITIONAL_SERVICE_TYPE2_CODE_INTT = 5;
+  ADDITIONAL_SERVICE_TYPE2_CODE_LOYT = 6;
+  ADDITIONAL_SERVICE_TYPE2_CODE_OTHN = 7;
+  ADDITIONAL_SERVICE_TYPE2_CODE_OTHP = 8;
+  ADDITIONAL_SERVICE_TYPE2_CODE_PRST = 9;
+  ADDITIONAL_SERVICE_TYPE2_CODE_BALC = 10;
+}
+message Address2 {
+  string adr_line1 = 1;
+  string adr_line2 = 2;
+  string strt_nm = 3;
+  string bldg_nb = 4;
+  string pstl_cd = 5;
+  string twn_nm = 6;
+  string ctry_sub_dvsn_mnr = 7;
+  string ctry_sub_dvsn_mjr = 8;
+  string ctry_sub_dvsn_mjr_nm = 9;
+  string ctry_sub_dvsn_mnr_nm = 10;
+  string ctry = 11;
+}
+message Address3 {
+  string adr_line1 = 1;
+  string adr_line2 = 2;
+  string strt_nm = 3;
+  string bldg_nb = 4;
+  string pstl_cd = 5;
+  string twn_nm = 6;
+  string ctry_sub_dvsn_mnr_nm = 7;
+  string ctry_sub_dvsn_mjr_nm = 8;
+  string ctry = 9;
+}
+message Adjustment10 {
+  string tp = 1;
+  string addtl_tp = 2;
+  string desc = 3;
+  string rsn = 4;
+  bool prmtn_elgblty = 5;
+  string prmtn_cd = 6;
+  string prmtn_cpn_nb = 7;
+  double qty = 8;
+  double unit_pric = 9;
+  double pctg = 10;
+  double adjstmnt_amt = 11;
+  bool tax_clctd_on_orgnl_amt = 12;
+}
+message Adjustment12 {
+  double amt = 1;
+  CreditDebit3Code cdt_dbt = 2;
+  string rsn = 3;
+}
+message Adjustment9 {
+  string tp = 1;
+  string addtl_tp = 2;
+  string desc = 3;
+  string rsn = 4;
+  string prmtn_cd = 5;
+  double pctg = 6;
+  double adjstmnt_amt = 7;
+  bool tax_clctd_on_orgnl_amt = 8;
+}
+enum Algorithm11Code {
+  // Default
+  ALGORITHM11_CODE_UNSPECIFIED = 0;
+  ALGORITHM11_CODE_HS_25 = 1;
+  ALGORITHM11_CODE_HS_38 = 2;
+  ALGORITHM11_CODE_HS_51 = 3;
+  ALGORITHM11_CODE_HS_01 = 4;
+}
+enum Algorithm13Code {
+  // Default
+  ALGORITHM13_CODE_UNSPECIFIED = 0;
+  ALGORITHM13_CODE_EA_2_C = 1;
+  ALGORITHM13_CODE_E_3_DC = 2;
+  ALGORITHM13_CODE_DKP_9 = 3;
+  ALGORITHM13_CODE_UKPT = 4;
+  ALGORITHM13_CODE_UKA_1 = 5;
+  ALGORITHM13_CODE_EA_9_C = 6;
+  ALGORITHM13_CODE_EA_5_C = 7;
+}
+enum Algorithm16Code {
+  // Default
+  ALGORITHM16_CODE_UNSPECIFIED = 0;
+  ALGORITHM16_CODE_HS_25 = 1;
+  ALGORITHM16_CODE_HS_38 = 2;
+  ALGORITHM16_CODE_HS_51 = 3;
+  ALGORITHM16_CODE_HS_01 = 4;
+  ALGORITHM16_CODE_SH_31 = 5;
+  ALGORITHM16_CODE_SH_32 = 6;
+  ALGORITHM16_CODE_SH_33 = 7;
+  ALGORITHM16_CODE_SH_35 = 8;
+  ALGORITHM16_CODE_SHK_1 = 9;
+  ALGORITHM16_CODE_SHK_2 = 10;
+}
+enum Algorithm17Code {
+  // Default
+  ALGORITHM17_CODE_UNSPECIFIED = 0;
+  ALGORITHM17_CODE_MACC = 1;
+  ALGORITHM17_CODE_MCCS = 2;
+  ALGORITHM17_CODE_CMA_1 = 3;
+  ALGORITHM17_CODE_MCC_1 = 4;
+  ALGORITHM17_CODE_CMA_9 = 5;
+  ALGORITHM17_CODE_CMA_5 = 6;
+  ALGORITHM17_CODE_CMA_2 = 7;
+  ALGORITHM17_CODE_CM_31 = 8;
+  ALGORITHM17_CODE_CM_32 = 9;
+  ALGORITHM17_CODE_CM_33 = 10;
+  ALGORITHM17_CODE_MCS_3 = 11;
+  ALGORITHM17_CODE_CCA_1 = 12;
+  ALGORITHM17_CODE_CCA_2 = 13;
+  ALGORITHM17_CODE_CCA_3 = 14;
+}
+enum Algorithm18Code {
+  // Default
+  ALGORITHM18_CODE_UNSPECIFIED = 0;
+  ALGORITHM18_CODE_EA_2_C = 1;
+  ALGORITHM18_CODE_E_3_DC = 2;
+  ALGORITHM18_CODE_DKP_9 = 3;
+  ALGORITHM18_CODE_UKPT = 4;
+  ALGORITHM18_CODE_UKA_1 = 5;
+  ALGORITHM18_CODE_EA_9_C = 6;
+  ALGORITHM18_CODE_EA_5_C = 7;
+  ALGORITHM18_CODE_DA_12 = 8;
+  ALGORITHM18_CODE_DA_19 = 9;
+  ALGORITHM18_CODE_DA_25 = 10;
+  ALGORITHM18_CODE_N_108 = 11;
+  ALGORITHM18_CODE_EA_5_R = 12;
+  ALGORITHM18_CODE_EA_9_R = 13;
+  ALGORITHM18_CODE_EA_2_R = 14;
+  ALGORITHM18_CODE_E_3_DR = 15;
+  ALGORITHM18_CODE_E_36_C = 16;
+  ALGORITHM18_CODE_E_36_R = 17;
+  ALGORITHM18_CODE_SD_5_C = 18;
+}
+enum Algorithm19Code {
+  // Default
+  ALGORITHM19_CODE_UNSPECIFIED = 0;
+  ALGORITHM19_CODE_ERS_2 = 1;
+  ALGORITHM19_CODE_ERS_1 = 2;
+  ALGORITHM19_CODE_RPSS = 3;
+  ALGORITHM19_CODE_ECC_5 = 4;
+  ALGORITHM19_CODE_ECC_1 = 5;
+  ALGORITHM19_CODE_ECC_4 = 6;
+  ALGORITHM19_CODE_ECC_2 = 7;
+  ALGORITHM19_CODE_ECC_3 = 8;
+  ALGORITHM19_CODE_ERS_3 = 9;
+  ALGORITHM19_CODE_ECP_2 = 10;
+  ALGORITHM19_CODE_ECP_3 = 11;
+  ALGORITHM19_CODE_ECP_5 = 12;
+}
+enum Algorithm20Code {
+  // Default
+  ALGORITHM20_CODE_UNSPECIFIED = 0;
+  ALGORITHM20_CODE_HS_25 = 1;
+  ALGORITHM20_CODE_HS_38 = 2;
+  ALGORITHM20_CODE_HS_51 = 3;
+}
+enum Algorithm23Code {
+  // Default
+  ALGORITHM23_CODE_UNSPECIFIED = 0;
+  ALGORITHM23_CODE_EA_2_C = 1;
+  ALGORITHM23_CODE_E_3_DC = 2;
+  ALGORITHM23_CODE_EA_9_C = 3;
+  ALGORITHM23_CODE_EA_5_C = 4;
+  ALGORITHM23_CODE_EA_2_R = 5;
+  ALGORITHM23_CODE_EA_9_R = 6;
+  ALGORITHM23_CODE_EA_5_R = 7;
+  ALGORITHM23_CODE_E_3_DR = 8;
+  ALGORITHM23_CODE_E_36_C = 9;
+  ALGORITHM23_CODE_E_36_R = 10;
+  ALGORITHM23_CODE_SD_5_C = 11;
+}
+enum Algorithm5Code {
+  // Default
+  ALGORITHM5_CODE_UNSPECIFIED = 0;
+  ALGORITHM5_CODE_HS_25 = 1;
+  ALGORITHM5_CODE_HS_38 = 2;
+  ALGORITHM5_CODE_HS_51 = 3;
+}
+enum Algorithm7Code {
+  // Default
+  ALGORITHM7_CODE_UNSPECIFIED = 0;
+  ALGORITHM7_CODE_ERSA = 1;
+  ALGORITHM7_CODE_RSAO = 2;
+}
+enum Algorithm8Code {
+  // Default
+  ALGORITHM8_CODE_UNSPECIFIED = 0;
+  ALGORITHM8_CODE_MGF_1 = 1;
+}
+message AlgorithmIdentification12 {
+  Algorithm8Code algo = 1;
+  Parameter5 param = 2;
+}
+message AlgorithmIdentification18 {
+  Algorithm8Code algo = 1;
+  Parameter9 param = 2;
+}
+message AlgorithmIdentification19 {
+  Algorithm7Code algo = 1;
+  Parameter10 param = 2;
+}
+message AlgorithmIdentification20 {
+  Algorithm19Code algo = 1;
+  Parameter11 param = 2;
+}
+message AlgorithmIdentification21 {
+  Algorithm16Code algo = 1;
+}
+message AlgorithmIdentification22 {
+  Algorithm17Code algo = 1;
+  Parameter7 param = 2;
+}
+message AlgorithmIdentification23 {
+  Algorithm18Code algo = 1;
+  Parameter12 param = 2;
+}
+message AlgorithmIdentification24 {
+  Algorithm18Code algo = 1;
+  Parameter12 param = 2;
+}
+message AlgorithmIdentification25 {
+  Algorithm23Code algo = 1;
+  Parameter7 param = 2;
+}
+message AlgorithmIdentification26 {
+  Algorithm8Code algo = 1;
+  Algorithm5Code param = 2;
+}
+message AlgorithmIdentification27 {
+  Algorithm7Code algo = 1;
+  Parameter13 param = 2;
+}
+message AlgorithmIdentification28 {
+  Algorithm13Code algo = 1;
+  Parameter14 param = 2;
+}
+message Amount12 {
+  TemporaryServicesCharge1Code tp = 1;
+  string othr_tp = 2;
+  double rate = 3;
+  string hrs = 4;
+}
+message Amount13 {
+  string tp = 1;
+  string desc = 2;
+  double amt = 3;
+}
+message Amount15 {
+  double amt = 1;
+  string ccy = 2;
+  double fctv_xchg_rate = 3;
+  uint32 convs_dt = 4;
+  uint64 convs_tm = 5;
+}
+message Amount16 {
+  double amt = 1;
+  CreditDebit3Code cdt_dbt = 2;
+}
+message Amount17 {
+  double amt = 1;
+  string ccy = 2;
+  CreditDebit3Code cdt_dbt = 3;
+}
+message Amount18 {
+  CarRentalServiceType2Code tp = 1;
+  string othr_tp = 2;
+  double amt = 3;
+  CreditDebit3Code cdt_dbt = 4;
+  bool cstmr_ntfd_ind = 5;
+}
+message Amount19 {
+  string desc = 1;
+  double amt = 2;
+  CreditDebit3Code cdt_dbt = 3;
+  repeated Tax39 tax = 4;
+}
+message Amount20 {
+  TypeOfAmount19Code tp_of_chrg = 1;
+  string othr_tp_of_chrg = 2;
+  double amt = 3;
+  CreditDebit3Code cdt_dbt = 4;
+}
+message AmountDetails2 {
+  TypeOfAmount20Code tp = 1;
+  string othr_tp = 2;
+  double amt = 3;
+  CreditDebit3Code cdt_dbt = 4;
+  repeated Tax39 tax = 5;
+}
+message AncillaryPurchase2 {
+  string ancllry_doc_nb = 1;
+  string rltd_doc_nb = 2;
+  string svc_ctgy_cd = 3;
+  string svc_sub_ctgy_cd = 4;
+  string svc_prvdr_svc_tp = 5;
+  string cdt_rsn_cd = 6;
+  string summry_cmmdty_id = 7;
+  Amount16 amt = 8;
+  double fee = 9;
+  repeated Tax39 tax = 10;
+  string addtl_data = 11;
+}
+message ApprovalEntity2 {
+  string id = 1;
+  PartyType26Code tp = 2;
+  string othr_tp = 3;
+  PartyType9Code assgnr = 4;
+  string ctry = 5;
+  string shrt_nm = 6;
+}
+enum AttributeType1Code {
+  // Default
+  ATTRIBUTE_TYPE1_CODE_UNSPECIFIED = 0;
+  ATTRIBUTE_TYPE1_CODE_CNAT = 1;
+  ATTRIBUTE_TYPE1_CODE_LATT = 2;
+  ATTRIBUTE_TYPE1_CODE_OATT = 3;
+  ATTRIBUTE_TYPE1_CODE_OUAT = 4;
+  ATTRIBUTE_TYPE1_CODE_CATT = 5;
+}
+message AuthenticatedData5 {
+  double vrsn = 1;
+  repeated Recipient6Choice rcpt = 2;
+  AlgorithmIdentification22 m_a_c_algo = 3;
+  EncapsulatedContent3 ncpsltd_cntt = 4;
+  bytes m_a_c = 5;
+}
+message AuthorisedAmount1 {
+  uint64 dt_tm = 1;
+  double amt = 2;
+  string addtl_data = 3;
+}
+message Authority1 {
+  string ctry = 1;
+  string ctry_sub_dvsn_mjr = 2;
+  string ctry_sub_dvsn_mnr = 3;
+  string ctry_sub_dvsn_mjr_nm = 4;
+  string ctry_sub_dvsn_mnr_nm = 5;
+  string nm = 6;
+}
+message BatchManagementInformation1 {
+  string colltn_id = 1;
+  string btch_id = 2;
+  string msg_seq_nb = 3;
+  bytes msg_chcksm_inpt_val = 4;
+}
+enum BytePadding1Code {
+  // Default
+  BYTE_PADDING1_CODE_UNSPECIFIED = 0;
+  BYTE_PADDING1_CODE_LNGT = 1;
+  BYTE_PADDING1_CODE_NUL_8 = 2;
+  BYTE_PADDING1_CODE_NULG = 3;
+  BYTE_PADDING1_CODE_NULL = 4;
+  BYTE_PADDING1_CODE_RAND = 5;
+}
+message Capabilities2 {
+  repeated CardReadingCapabilities1 card_rdng_cpblty = 1;
+  repeated CardWritingCapabilities1 card_wrtg_cpblty = 2;
+  double p_i_n_lngth_cpblty = 3;
+  PINEntrySecurityCharacteristic1Code p_i_n_ntry_scty_chrtc = 4;
+  string othr_p_i_n_ntry_scty_chrtc = 5;
+  double apprvl_cd_lngth = 6;
+  double mx_scrpt_lngth = 7;
+  bool card_captr_cpbl = 8;
+  OnLineCapability2Code on_line_cpblty = 9;
+  repeated DisplayCapabilities6 msg_cpblty = 10;
+  repeated CardholderVerificationCapabilities1 crdhldr_vrfctn_cpblty = 11;
+  bool temp_scr_card_data_storg = 12;
+}
+enum CarRentalActivity1Code {
+  // Default
+  CAR_RENTAL_ACTIVITY1_CODE_UNSPECIFIED = 0;
+  CAR_RENTAL_ACTIVITY1_CODE_CARS = 1;
+  CAR_RENTAL_ACTIVITY1_CODE_GLBL = 2;
+  CAR_RENTAL_ACTIVITY1_CODE_INDV = 3;
+  CAR_RENTAL_ACTIVITY1_CODE_PETP = 4;
+  CAR_RENTAL_ACTIVITY1_CODE_OTHP = 5;
+  CAR_RENTAL_ACTIVITY1_CODE_OTHN = 6;
+  CAR_RENTAL_ACTIVITY1_CODE_OTHR = 7;
+}
+enum CarRentalServiceType2Code {
+  // Default
+  CAR_RENTAL_SERVICE_TYPE2_CODE_UNSPECIFIED = 0;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_ADJM = 1;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_AUTH = 2;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_BAST = 3;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_CLEA = 4;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_DMGS = 5;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_DLVR = 6;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_DPOF = 7;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_ENTE = 8;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_EXTC = 9;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_EXDY = 10;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_EXDI = 11;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_EXHR = 12;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_FINE = 13;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_FUEL = 14;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_GARA = 15;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_GPSY = 16;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_INSU = 17;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_LATE = 18;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_LIIN = 19;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_LDIN = 20;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_MISC = 21;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_NAVI = 22;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_NOSH = 23;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_ONEW = 24;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_OTHN = 25;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_OTHP = 26;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_PARK = 27;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_PRIN = 28;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_PFIN = 29;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_PHON = 30;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_REGD = 31;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_SMOK = 32;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_TOLL = 33;
+  CAR_RENTAL_SERVICE_TYPE2_CODE_TOWI = 34;
+}
+message CardData6 {
+  string p_a_n = 1;
+  bool prtctd_p_a_n_ind = 2;
+  string card_seq_nb = 3;
+  string fctv_dt = 4;
+  string xpry_dt = 5;
+  string svc_cd = 6;
+  string trck1 = 7;
+  Track2Data1Choice trck2 = 8;
+  string trck3 = 9;
+  string pmt_acct_ref = 10;
+  string p_a_n_acct_rg = 11;
+  string card_ctry_cd = 12;
+  string card_pdct_tp = 13;
+  string card_pdct_sub_tp = 14;
+  string card_prtfl_idr = 15;
+  repeated AdditionalData1 addtl_card_data = 16;
+}
+message CardData7 {
+  string p_a_n = 1;
+  bool prtctd_p_a_n_ind = 2;
+  string card_seq_nb = 3;
+  string fctv_dt = 4;
+  string xpry_dt = 5;
+  string pmt_acct_ref = 6;
+  string p_a_n_acct_rg = 7;
+  string card_ctry_cd = 8;
+  string card_pdct_tp = 9;
+  string card_pdct_sub_tp = 10;
+  string card_prtfl_idr = 11;
+  repeated AdditionalData1 addtl_card_data = 12;
+}
+enum CardDataReading10Code {
+  // Default
+  CARD_DATA_READING10_CODE_UNSPECIFIED = 0;
+  CARD_DATA_READING10_CODE_ICPY = 1;
+  CARD_DATA_READING10_CODE_MGST = 2;
+  CARD_DATA_READING10_CODE_ICCY = 3;
+  CARD_DATA_READING10_CODE_MICR = 4;
+  CARD_DATA_READING10_CODE_MLEY = 5;
+  CARD_DATA_READING10_CODE_OCRR = 6;
+  CARD_DATA_READING10_CODE_MSIP = 7;
+  CARD_DATA_READING10_CODE_OPTC = 8;
+  CARD_DATA_READING10_CODE_OTHN = 9;
+  CARD_DATA_READING10_CODE_RFID = 10;
+  CARD_DATA_READING10_CODE_UNSP = 11;
+  CARD_DATA_READING10_CODE_OTHP = 12;
+  CARD_DATA_READING10_CODE_KEEN = 13;
+  CARD_DATA_READING10_CODE_DFLE = 14;
+}
+enum CardDataReading5Code {
+  // Default
+  CARD_DATA_READING5_CODE_UNSPECIFIED = 0;
+  CARD_DATA_READING5_CODE_TAGC = 1;
+  CARD_DATA_READING5_CODE_PHYS = 2;
+  CARD_DATA_READING5_CODE_BRCD = 3;
+  CARD_DATA_READING5_CODE_MGST = 4;
+  CARD_DATA_READING5_CODE_CICC = 5;
+  CARD_DATA_READING5_CODE_DFLE = 6;
+  CARD_DATA_READING5_CODE_CTLS = 7;
+  CARD_DATA_READING5_CODE_ECTL = 8;
+  CARD_DATA_READING5_CODE_CDFL = 9;
+}
+enum CardDataReading9Code {
+  // Default
+  CARD_DATA_READING9_CODE_UNSPECIFIED = 0;
+  CARD_DATA_READING9_CODE_UNKW = 1;
+  CARD_DATA_READING9_CODE_OTHN = 2;
+  CARD_DATA_READING9_CODE_OTHP = 3;
+  CARD_DATA_READING9_CODE_CAMR = 4;
+  CARD_DATA_READING9_CODE_KEEN = 5;
+  CARD_DATA_READING9_CODE_ICPY = 6;
+  CARD_DATA_READING9_CODE_OPTC = 7;
+  CARD_DATA_READING9_CODE_CDFL = 8;
+  CARD_DATA_READING9_CODE_MBNK = 9;
+  CARD_DATA_READING9_CODE_TOKN = 10;
+  CARD_DATA_READING9_CODE_ICCY = 11;
+}
+enum CardDataWriting1Code {
+  // Default
+  CARD_DATA_WRITING1_CODE_UNSPECIFIED = 0;
+  CARD_DATA_WRITING1_CODE_ICPY = 1;
+  CARD_DATA_WRITING1_CODE_MGST = 2;
+  CARD_DATA_WRITING1_CODE_ICCY = 3;
+  CARD_DATA_WRITING1_CODE_MSIP = 4;
+  CARD_DATA_WRITING1_CODE_OTHN = 5;
+  CARD_DATA_WRITING1_CODE_UNSP = 6;
+  CARD_DATA_WRITING1_CODE_OTHP = 7;
+}
+enum CardDepositType1Code {
+  // Default
+  CARD_DEPOSIT_TYPE1_CODE_UNSPECIFIED = 0;
+  CARD_DEPOSIT_TYPE1_CODE_OTHP = 1;
+  CARD_DEPOSIT_TYPE1_CODE_OTHN = 2;
+  CARD_DEPOSIT_TYPE1_CODE_ENVL = 3;
+  CARD_DEPOSIT_TYPE1_CODE_CHEC = 4;
+  CARD_DEPOSIT_TYPE1_CODE_CASH = 5;
+}
+message CardProgramme2 {
+  repeated CardProgrammeMode2 card_prgrmm_propsd = 1;
+  CardProgrammeMode3 card_prgrmm_apld = 2;
+}
+message CardProgrammeMode2 {
+  string tp = 1;
+  repeated string id = 2;
+}
+message CardProgrammeMode3 {
+  string tp = 1;
+  string id = 2;
+  repeated AdditionalData1 addtl_id = 3;
+}
+message CardReadingCapabilities1 {
+  CardDataReading10Code cpblty = 1;
+  string othr_cpblty = 2;
+}
+message CardWritingCapabilities1 {
+  CardDataWriting1Code cpblty = 1;
+  string othr_cpblty = 2;
+}
+message Cardholder19 {
+  CardholderName3 crdhldr_nm = 1;
+  repeated Credentials2 id = 2;
+  Address2 adr = 3;
+  Contact1 ctct_inf = 4;
+  uint32 dt_of_birth = 5;
+  bool hgh_val_cstmr_ind = 6;
+  repeated AdditionalData1 addtl_data = 7;
+  LocalData7 lcl_data = 8;
+}
+message CardholderName2 {
+  string nm = 1;
+  string gvn_nm = 2;
+  string mddl_nm = 3;
+  string last_nm = 4;
+}
+message CardholderName3 {
+  string nm = 1;
+  string gvn_nm = 2;
+  string mddl_nm = 3;
+  string last_nm = 4;
+}
+message CardholderVerificationCapabilities1 {
+  CardholderVerificationCapability5Code cpblty = 1;
+  string othr_cpblty = 2;
+}
+enum CardholderVerificationCapability5Code {
+  // Default
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_UNSPECIFIED = 0;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_APKI = 1;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_NOVF = 2;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_FBIG = 3;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_FBIO = 4;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_FDSG = 5;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_FCPN = 6;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_FEPN = 7;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_NBIO = 8;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_NPIN = 9;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_OTHN = 10;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_OTHP = 11;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_SIGN = 12;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_UNSP = 13;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_VORN = 14;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_PKIS = 15;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_NOPN = 16;
+  CARDHOLDER_VERIFICATION_CAPABILITY5_CODE_NOOP = 17;
+}
+message CarrierIdentification1 {
+  string nm = 1;
+  string cd = 2;
+  string i_a_t_a_cd = 3;
+}
+message CertificateIssuer1 {
+  repeated RelativeDistinguishedName1 rltv_dstngshd_nm = 1;
+}
+message ClaimInformation1 {
+  string clm_crdntls = 1;
+  string assgnr = 2;
+}
+message CommunicationCharacteristics3 {
+  POICommunicationType2Code com_tp = 1;
+  repeated PartyType7Code rmot_pty = 2 [
+    packed = true
+  ];
+  bool actv = 3;
+}
+enum CompanyAssigner2Code {
+  // Default
+  COMPANY_ASSIGNER2_CODE_UNSPECIFIED = 0;
+  COMPANY_ASSIGNER2_CODE_ASSO = 1;
+  COMPANY_ASSIGNER2_CODE_AUTH = 2;
+  COMPANY_ASSIGNER2_CODE_CPNY = 3;
+  COMPANY_ASSIGNER2_CODE_LEII = 4;
+  COMPANY_ASSIGNER2_CODE_TRAG = 5;
+  COMPANY_ASSIGNER2_CODE_OTHP = 6;
+  COMPANY_ASSIGNER2_CODE_OTHN = 7;
+}
+message Contact1 {
+  string nm = 1;
+  string home_phne_nb = 2;
+  string biz_phne_nb = 3;
+  string mob_phne_nb = 4;
+  string othr_phne_nb = 5;
+  string prsnl_email_adr = 6;
+  string biz_email_adr = 7;
+  string othr_email_adr = 8;
+  string lang = 9;
+}
+message Contact2 {
+  string nm = 1;
+  string home_phne_nb = 2;
+  string biz_phne_nb = 3;
+  string mob_phne_nb = 4;
+  string othr_phne_nb = 5;
+  string prsnl_email_adr = 6;
+  string biz_email_adr = 7;
+  string othr_email_adr = 8;
+  string home_fax_nb = 9;
+  string biz_fax_nb = 10;
+  string u_r_l_adr = 11;
+  string lang = 12;
+}
+message Contact3 {
+  string cntrl_phne_nb = 1;
+  string prprty_phne_nb = 2;
+  string toll_free_phne_nb = 3;
+  string email = 4;
+  string fax_nb = 5;
+  string u_r_l_adr = 6;
+  string lang = 7;
+}
+message Contact6 {
+  string home_phne_nb = 1;
+  string biz_phne_nb = 2;
+  string mob_phne_nb = 3;
+  string othr_phne_nb = 4;
+  string prsnl_email_adr = 5;
+  string biz_email_adr = 6;
+  string othr_email_adr = 7;
+  string home_fax_nb = 8;
+  string biz_fax_nb = 9;
+  string u_r_l_adr = 10;
+  string lang = 11;
+}
+message Content1 {
+  string val = 1;
+  bytes sgntr = 2;
+  string cert_id = 3;
+}
+message ContentInformationType19 {
+  ContentType2Code cntt_tp = 1;
+  EnvelopedData5 envlpd_data = 2;
+  AuthenticatedData5 authntcd_data = 3;
+  SignedData5 sgnd_data = 4;
+  DigestedData5 dgstd_data = 5;
+}
+message ContentInformationType20 {
+  MACData1 m_a_c_data = 1;
+  string m_a_c = 2;
+}
+enum ContentType2Code {
+  // Default
+  CONTENT_TYPE2_CODE_UNSPECIFIED = 0;
+  CONTENT_TYPE2_CODE_DATA = 1;
+  CONTENT_TYPE2_CODE_SIGN = 2;
+  CONTENT_TYPE2_CODE_EVLP = 3;
+  CONTENT_TYPE2_CODE_DGST = 4;
+  CONTENT_TYPE2_CODE_AUTH = 5;
+}
+enum ContentType3Code {
+  // Default
+  CONTENT_TYPE3_CODE_UNSPECIFIED = 0;
+  CONTENT_TYPE3_CODE_EVLP = 1;
+  CONTENT_TYPE3_CODE_IFSE = 2;
+}
+message Context10 {
+  PointOfServiceContext3 pt_of_svc_cntxt = 1;
+  TransactionContext7 tx_cntxt = 2;
+  repeated Verification5 vrfctn = 3;
+  repeated RiskContext2 rsk_cntxt = 4;
+  SaleContext8 sale_cntxt = 5;
+}
+message Context12 {
+  PointOfServiceContext3 pt_of_svc_cntxt = 1;
+  TransactionContext7 tx_cntxt = 2;
+  repeated Verification4 vrfctn = 3;
+  RiskContext2 rsk_cntxt = 4;
+  SaleContext8 sale_cntxt = 5;
+}
+enum CorporateTaxType1Code {
+  // Default
+  CORPORATE_TAX_TYPE1_CODE_UNSPECIFIED = 0;
+  CORPORATE_TAX_TYPE1_CODE_SMBS = 1;
+  CORPORATE_TAX_TYPE1_CODE_OTHR = 2;
+  CORPORATE_TAX_TYPE1_CODE_CORP = 3;
+}
+message Credentials2 {
+  Identification3Code id_cd = 1;
+  string othr_id_cd = 2;
+  string id_val = 3;
+  string id_xpry_dt = 4;
+  Authority1 assgnr_authrty = 5;
+}
+enum CreditDebit3Code {
+  // Default
+  CREDIT_DEBIT3_CODE_UNSPECIFIED = 0;
+  CREDIT_DEBIT3_CODE_CRDT = 1;
+  CREDIT_DEBIT3_CODE_DBIT = 2;
+}
+message CryptographicKey13 {
+  string id = 1;
+  bytes addtl_id = 2;
+  string vrsn = 3;
+  CryptographicKeyType3Code tp = 4;
+  repeated KeyUsage1Code fctn = 5 [
+    packed = true
+  ];
+  uint64 actvtn_dt = 6;
+  uint64 deactvtn_dt = 7;
+  ContentInformationType19 key_val = 8;
+  bytes key_chck_val = 9;
+  repeated GenericInformation1 addtl_mgmt_inf = 10;
+}
+enum CryptographicKeyType3Code {
+  // Default
+  CRYPTOGRAPHIC_KEY_TYPE3_CODE_UNSPECIFIED = 0;
+  CRYPTOGRAPHIC_KEY_TYPE3_CODE_AES_2 = 1;
+  CRYPTOGRAPHIC_KEY_TYPE3_CODE_EDE_3 = 2;
+  CRYPTOGRAPHIC_KEY_TYPE3_CODE_DKP_9 = 3;
+  CRYPTOGRAPHIC_KEY_TYPE3_CODE_AES_9 = 4;
+  CRYPTOGRAPHIC_KEY_TYPE3_CODE_AES_5 = 5;
+  CRYPTOGRAPHIC_KEY_TYPE3_CODE_EDE_4 = 6;
+}
+message Customer4 {
+  CustomerType2Code tp = 1;
+  string ref_nb = 2;
+  repeated string tax_regn_id = 3;
+  string authrsd_ctct_cpny = 4;
+  string authrsd_ctct_nm = 5;
+  string authrsd_ctct_phne_nb = 6;
+  bool v_i_p_ind = 7;
+  string cstmr_rltsh = 8;
+}
+message Customer6 {
+  string acct_nb = 1;
+  string nm = 2;
+  string phne_nb = 3;
+}
+message Customer7 {
+  string cstmr_id = 1;
+  string cstmr_dsgnt = 2;
+  CardholderName3 nm = 3;
+  Address2 adr = 4;
+  Contact6 ctct_inf = 5;
+  repeated Credentials2 crdntls = 6;
+  string ntlty = 7;
+  string ctry_of_birth = 8;
+  uint32 dt_of_birth = 9;
+  LocalData3 lcl_data = 10;
+  repeated AdditionalData1 addtl_data = 11;
+}
+message Customer8 {
+  string nm = 1;
+  PartyIdentification208 id = 2;
+  string cstmr_file_ref_nb = 3;
+  string age = 4;
+  Address2 adr = 5;
+  Contact6 ctct = 6;
+}
+enum CustomerAssigner1Code {
+  // Default
+  CUSTOMER_ASSIGNER1_CODE_UNSPECIFIED = 0;
+  CUSTOMER_ASSIGNER1_CODE_AUTH = 1;
+  CUSTOMER_ASSIGNER1_CODE_CRCY = 2;
+  CUSTOMER_ASSIGNER1_CODE_CUST = 3;
+  CUSTOMER_ASSIGNER1_CODE_ONFL = 4;
+  CUSTOMER_ASSIGNER1_CODE_OTHR = 5;
+  CUSTOMER_ASSIGNER1_CODE_TRAY = 6;
+}
+message CustomerDevice4 {
+  Device2 dvc = 1;
+  DeviceIdentification1 dvc_id = 2;
+  DeviceOperatingSystem1 oprg_sys = 3;
+  string prvdr = 4;
+  repeated AdditionalData1 addtl_data = 5;
+}
+enum CustomerDeviceType2Code {
+  // Default
+  CUSTOMER_DEVICE_TYPE2_CODE_UNSPECIFIED = 0;
+  CUSTOMER_DEVICE_TYPE2_CODE_MOBL = 1;
+  CUSTOMER_DEVICE_TYPE2_CODE_OTHN = 2;
+  CUSTOMER_DEVICE_TYPE2_CODE_OTHP = 3;
+  CUSTOMER_DEVICE_TYPE2_CODE_PECR = 4;
+  CUSTOMER_DEVICE_TYPE2_CODE_TBLT = 5;
+  CUSTOMER_DEVICE_TYPE2_CODE_NSCR = 6;
+  CUSTOMER_DEVICE_TYPE2_CODE_SECR = 7;
+  CUSTOMER_DEVICE_TYPE2_CODE_EMBD = 8;
+  CUSTOMER_DEVICE_TYPE2_CODE_VHCL = 9;
+  CUSTOMER_DEVICE_TYPE2_CODE_WRBL = 10;
+  CUSTOMER_DEVICE_TYPE2_CODE_WATC = 11;
+  CUSTOMER_DEVICE_TYPE2_CODE_GAMB = 12;
+  CUSTOMER_DEVICE_TYPE2_CODE_JEWL = 13;
+  CUSTOMER_DEVICE_TYPE2_CODE_KFOB = 14;
+  CUSTOMER_DEVICE_TYPE2_CODE_STIC = 15;
+  CUSTOMER_DEVICE_TYPE2_CODE_UNKW = 16;
+}
+message CustomerReference1 {
+  string id = 1;
+  string dtl = 2;
+}
+enum CustomerType2Code {
+  // Default
+  CUSTOMER_TYPE2_CODE_UNSPECIFIED = 0;
+  CUSTOMER_TYPE2_CODE_CSMR = 1;
+  CUSTOMER_TYPE2_CODE_CPNY = 2;
+}
+message DeliveryInformation4 {
+  string dlvry_note_nb = 1;
+  Address2 adr = 2;
+  Contact6 ctct = 3;
+  string instrs = 4;
+  uint32 dt = 5;
+  uint64 tm = 6;
+}
+message DepartureOrArrival1 {
+  string lctn = 1;
+  string desc = 2;
+  uint32 dt = 3;
+  uint64 tm = 4;
+}
+message DepartureOrArrival2 {
+  string crrier_cd = 1;
+  string route_nb = 2;
+  uint32 dt = 3;
+  uint64 tm = 4;
+}
+message DepositDetails2 {
+  CardDepositType1Code tp = 1;
+  string othr_tp = 2;
+  Amount16 amt = 3;
+}
+message Destination3 {
+  string nm_and_lctn = 1;
+  Address2 adr = 2;
+}
+message DetailedAmount22 {
+  string tp = 1;
+  string othr_tp = 2;
+  CreditDebit3Code cdt_dbt = 3;
+  double amt = 4;
+  double crdhldr_bllg_amt = 5;
+  double rcncltn_amt = 6;
+  string desc = 7;
+}
+message Device2 {
+  string manfctr = 1;
+  string manfctr_mdl_id = 2;
+  CustomerDeviceType2Code tp = 3;
+  string othr_tp = 4;
+  string lang = 5;
+  string phne_nb = 6;
+  string geogc_lctn = 7;
+  string lctn_ctry_cd = 8;
+  string i_p_adr = 9;
+  string email = 10;
+  string dvc_nm = 11;
+  string dvc_nm_nrmlzd = 12;
+}
+message DeviceIdentification1 {
+  DeviceIdentificationType1Code tp = 1;
+  string othr_tp = 2;
+  string id = 3;
+  string assgnr = 4;
+}
+enum DeviceIdentificationType1Code {
+  // Default
+  DEVICE_IDENTIFICATION_TYPE1_CODE_UNSPECIFIED = 0;
+  DEVICE_IDENTIFICATION_TYPE1_CODE_IMEI = 1;
+  DEVICE_IDENTIFICATION_TYPE1_CODE_OTHN = 2;
+  DEVICE_IDENTIFICATION_TYPE1_CODE_OTHP = 3;
+  DEVICE_IDENTIFICATION_TYPE1_CODE_SEID = 4;
+  DEVICE_IDENTIFICATION_TYPE1_CODE_SENU = 5;
+}
+message DeviceOperatingSystem1 {
+  string id = 1;
+  DeviceOperatingSystemType1Code tp = 2;
+  string othr_tp = 3;
+  string vrsn = 4;
+  string bld = 5;
+}
+enum DeviceOperatingSystemType1Code {
+  // Default
+  DEVICE_OPERATING_SYSTEM_TYPE1_CODE_UNSPECIFIED = 0;
+  DEVICE_OPERATING_SYSTEM_TYPE1_CODE_DROI = 1;
+  DEVICE_OPERATING_SYSTEM_TYPE1_CODE_BLCK = 2;
+  DEVICE_OPERATING_SYSTEM_TYPE1_CODE_IOSS = 3;
+  DEVICE_OPERATING_SYSTEM_TYPE1_CODE_OTHN = 4;
+  DEVICE_OPERATING_SYSTEM_TYPE1_CODE_OTHP = 5;
+  DEVICE_OPERATING_SYSTEM_TYPE1_CODE_TIZN = 6;
+  DEVICE_OPERATING_SYSTEM_TYPE1_CODE_WIND = 7;
+}
+message DigestedData5 {
+  double vrsn = 1;
+  AlgorithmIdentification21 dgst_algo = 2;
+  EncapsulatedContent3 ncpsltd_cntt = 3;
+  bytes dgst = 4;
+}
+message Discount3 {
+  string tp = 1;
+  string val = 2;
+}
+message DisplayCapabilities6 {
+  UserInterface1Code dstn = 1;
+  repeated OutputFormat1Code avlbl_frmt = 2 [
+    packed = true
+  ];
+  double nb_of_lines = 3;
+  double line_width = 4;
+  repeated string avlbl_lang = 5;
+}
+message DisputeData3 {
+  string presntmnt_cycl = 1;
+  string dspt_cond = 2;
+  string dspt_sts = 3;
+  bool prtl_dspt = 4;
+  repeated DisputeReference1 dspt_ref = 5;
+  string dcmnttn_sts = 6;
+  AdditionalData1 addtl_dspt_data = 7;
+  repeated string dspt_rjct_rsn = 8;
+  string chrgbck_elgblty = 9;
+}
+message DisputeIdentification1 {
+  string tp = 1;
+  string id = 2;
+}
+message DisputeReference1 {
+  PartyType32Code assgnr_ntty = 1;
+  string othr_assgnr_ntty = 2;
+  repeated DisputeIdentification1 dspt_id = 3;
+}
+message Distance1 {
+  UnitOfMeasure10Code unit_of_measr = 1;
+  string odmtr_start = 2;
+  string odmtr_rtr = 3;
+  string ttl_dstnc = 4;
+  string free_dstnc = 5;
+  double rate = 6;
+}
+message Document {
+  FinancialInitiationV03 fin_initn = 1;
+}
+message DocumentReference1 {
+  string tp = 1;
+  string ref = 2;
+}
+message Driver2 {
+  string nm = 1;
+  string id = 2;
+  DrivingLicense2 drvg_lic = 3;
+  string mplyr = 4;
+  string mplyee_id = 5;
+  string dept_nb = 6;
+  repeated TravelDocument2 addtl_id = 7;
+  uint32 dt_of_birth = 8;
+  AdditionalData1 addtl_data = 9;
+}
+message DriverInParty2 {
+  string nm = 1;
+  Address2 adr = 2;
+  Contact6 ctct = 3;
+  uint32 dt_of_birth = 4;
+  string age = 5;
+  repeated TravelDocument2 drvr_crdntl = 6;
+  DrivingLicense2 drvg_lic = 7;
+}
+message DrivingLicense2 {
+  string tp = 1;
+  PresentationMedium2Code form = 2;
+  string id = 3;
+  LegalStructure1Code assgnr = 4;
+  uint32 issnc_dt = 5;
+  uint32 xprtn_dt = 6;
+  string ctry = 7;
+  string stat = 8;
+  string prvc = 9;
+  string othr_authrty = 10;
+}
+message ECommerceData1 {
+  string tp = 1;
+  string val = 2;
+}
+message EncapsulatedContent3 {
+  ContentType2Code cntt_tp = 1;
+  bytes cntt = 2;
+}
+message EncryptedContent4 {
+  ContentType2Code cntt_tp = 1;
+  AlgorithmIdentification24 cntt_ncrptn_algo = 2;
+  bytes ncrptd_data = 3;
+}
+message EncryptedContent5 {
+  ContentType2Code cntt_tp = 1;
+  AlgorithmIdentification25 cntt_ncrptn_algo = 2;
+  repeated EncryptedDataElement1 ncrptd_data_elmt = 3;
+}
+message EncryptedData1 {
+  string ctrl = 1;
+  string key_set_idr = 2;
+  string drvd_inf = 3;
+  string algo = 4;
+  string key_lngth = 5;
+  string key_prtcn = 6;
+  string key_indx = 7;
+  string pddg_mtd = 8;
+  string ncrptd_data_frmt = 9;
+  repeated EncryptedDataElement1 ncrptd_data_elmt = 10;
+}
+message EncryptedData1Choice {
+  bytes binry_data = 1;
+  string hex_binry_val = 2;
+}
+message EncryptedDataElement1 {
+  string id = 1;
+  string othr_id = 2;
+  EncryptedData1Choice ncrptd_data = 3;
+  EncryptedDataFormat1Code clear_txt_data_frmt = 4;
+  string othr_clear_txt_data_frmt = 5;
+}
+enum EncryptedDataFormat1Code {
+  // Default
+  ENCRYPTED_DATA_FORMAT1_CODE_UNSPECIFIED = 0;
+  ENCRYPTED_DATA_FORMAT1_CODE_ASCI = 1;
+  ENCRYPTED_DATA_FORMAT1_CODE_BINF = 2;
+  ENCRYPTED_DATA_FORMAT1_CODE_EBCD = 3;
+  ENCRYPTED_DATA_FORMAT1_CODE_HEXF = 4;
+  ENCRYPTED_DATA_FORMAT1_CODE_OTHN = 5;
+  ENCRYPTED_DATA_FORMAT1_CODE_OTHP = 6;
+}
+enum EncryptionFormat2Code {
+  // Default
+  ENCRYPTION_FORMAT2_CODE_UNSPECIFIED = 0;
+  ENCRYPTION_FORMAT2_CODE_TR_31 = 1;
+  ENCRYPTION_FORMAT2_CODE_TR_34 = 2;
+  ENCRYPTION_FORMAT2_CODE_I_238 = 3;
+}
+enum EncryptionFormat3Code {
+  // Default
+  ENCRYPTION_FORMAT3_CODE_UNSPECIFIED = 0;
+  ENCRYPTION_FORMAT3_CODE_TR_34 = 1;
+  ENCRYPTION_FORMAT3_CODE_TR_31 = 2;
+  ENCRYPTION_FORMAT3_CODE_CTCE = 3;
+  ENCRYPTION_FORMAT3_CODE_CBCE = 4;
+}
+enum Endpoint1Code {
+  // Default
+  ENDPOINT1_CODE_UNSPECIFIED = 0;
+  ENDPOINT1_CODE_DEST = 1;
+  ENDPOINT1_CODE_ORIG = 2;
+  ENDPOINT1_CODE_OTHP = 3;
+  ENDPOINT1_CODE_OTHN = 4;
+}
+message EnvelopedData5 {
+  double vrsn = 1;
+  OriginatorInformation1 orgtr_inf = 2;
+  repeated Recipient6Choice rcpt = 3;
+  EncryptedContent4 ncrptd_cntt = 4;
+}
+message EnvelopedData6 {
+  double vrsn = 1;
+  repeated Recipient7Choice rcpt = 2;
+  EncryptedContent5 ncrptd_cntt = 3;
+}
+message Environment17 {
+  PartyIdentification263 acqrr = 1;
+  PartyIdentification263 orgtr = 2;
+  PartyIdentification263 sndr = 3;
+  PartyIdentification263 rcvr = 4;
+  PartyIdentification255 accptr = 5;
+  PartyIdentification263 dstn = 6;
+  PartyIdentification257 pyer = 7;
+  PartyIdentification257 pyee = 8;
+  Terminal4 termnl = 9;
+  PartyIdentification263 issr = 10;
+  CardData6 card = 11;
+  CustomerDevice4 cstmr_dvc = 12;
+  Wallet2 wllt = 13;
+  Token2 tkn = 14;
+  Cardholder19 crdhldr = 15;
+}
+message Environment20 {
+  PartyIdentification263 acqrr = 1;
+  PartyIdentification263 orgtr = 2;
+  PartyIdentification263 sndr = 3;
+  PartyIdentification263 rcvr = 4;
+  PartyIdentification254 accptr = 5;
+  PartyIdentification263 dstn = 6;
+  PartyIdentification257 pyer = 7;
+  PartyIdentification257 pyee = 8;
+  Terminal5 termnl = 9;
+  PartyIdentification263 issr = 10;
+  CardData7 card = 11;
+  CustomerDevice4 cstmr_dvc = 12;
+  Wallet2 wllt = 13;
+  Token2 tkn = 14;
+  Cardholder19 crdhldr = 15;
+}
+message ErrorDetails2 {
+  MessageError1Code msg_err_tp = 1;
+  string othr_msg_err_tp = 2;
+  string err_cd = 3;
+  string err_desc = 4;
+  repeated string data_elmt_in_err = 5;
+}
+enum ExchangeRateAgreementType1Code {
+  // Default
+  EXCHANGE_RATE_AGREEMENT_TYPE1_CODE_UNSPECIFIED = 0;
+  EXCHANGE_RATE_AGREEMENT_TYPE1_CODE_FWCT = 1;
+  EXCHANGE_RATE_AGREEMENT_TYPE1_CODE_NORM = 2;
+  EXCHANGE_RATE_AGREEMENT_TYPE1_CODE_OTHN = 3;
+  EXCHANGE_RATE_AGREEMENT_TYPE1_CODE_OTHP = 4;
+  EXCHANGE_RATE_AGREEMENT_TYPE1_CODE_SPOT = 5;
+}
+message ExchangeRateDetail1 {
+  Endpoint1Code end_pt = 1;
+  string othr_end_pt = 2;
+  string cntr_ccy_cd = 3;
+  string base_ccy_cd = 4;
+  double rate = 5;
+  ExchangeRateType2Code rate_tp = 6;
+  string othr_rate_tp = 7;
+  ExchangeRateAgreementType1Code agrmt_tp = 8;
+  string othr_agrmt_tp = 9;
+}
+message ExchangeRateInformation2 {
+  string prvdr = 1;
+  string id = 2;
+  uint32 dt = 3;
+  uint64 tm = 4;
+  ExchangeRateDetail1 xchg_rate_dtl = 5;
+  RateLock1 rate_lck = 6;
+}
+enum ExchangeRateType2Code {
+  // Default
+  EXCHANGE_RATE_TYPE2_CODE_UNSPECIFIED = 0;
+  EXCHANGE_RATE_TYPE2_CODE_SELL = 1;
+  EXCHANGE_RATE_TYPE2_CODE_OTHP = 2;
+  EXCHANGE_RATE_TYPE2_CODE_OTHN = 3;
+  EXCHANGE_RATE_TYPE2_CODE_MIDL = 4;
+  EXCHANGE_RATE_TYPE2_CODE_BUYR = 5;
+  EXCHANGE_RATE_TYPE2_CODE_AGRD = 6;
+}
+message FeeAmount3 {
+  double amt = 1;
+  CreditDebit3Code cdt_dbt = 2;
+  string ccy = 3;
+  double fctv_xchg_rate = 4;
+  uint32 convs_dt = 5;
+  uint64 convs_tm = 6;
+}
+message FinancialInitiation2 {
+  Environment17 envt = 1;
+  Context10 cntxt = 2;
+  Transaction145 tx = 3;
+  OriginalTransaction2 orgnl_tx = 4;
+  AddendumData3 adddm_data = 5;
+  ProcessingResult16 prcg_rslt = 6;
+  string i_c_c_rltd_data = 7;
+  repeated ProtectedData1 prtctd_data = 8;
+  repeated SupplementaryData1 splmtry_data = 9;
+}
+message FinancialInitiationV03 {
+  Header62 hdr = 1;
+  FinancialInitiation2 body = 2;
+  ContentInformationType20 scty_trlr = 3;
+}
+message FinancialInstitution7 {
+  string id = 1;
+  string nm = 2;
+  Address2 adr = 3;
+  string email = 4;
+  string u_r_l_adr = 5;
+  string phne_nb = 6;
+  string cstmr_svc = 7;
+  string addtl_ctct_inf = 8;
+  LocalData2 lcl_data = 9;
+}
+message FleetData4 {
+  FleetSummary2 summry = 1;
+  repeated FleetLineItem4 line_itm = 2;
+}
+message FleetDiscountTotals1 {
+  double ttl_amt = 1;
+  double fuel_amt = 2;
+  double non_fuel_amt = 3;
+}
+message FleetLineItem4 {
+  bool fuel_ind = 1;
+  FleetServiceType1Code svc_tp = 2;
+  string fuel_brnd_cd = 3;
+  string fleet_pdct_cd = 4;
+  string fleet_pdct_ctgy = 5;
+  string fleet_pdct_qlfr = 6;
+  string fleet_pdct_cd_assgnr = 7;
+  bool unit_pric_tax_ind = 8;
+  double unit_pric = 9;
+  UnitOfMeasure1Code unit_of_measr = 10;
+  string othr_unit_of_measr = 11;
+  double pdct_qty = 12;
+  double dscnt_amt = 13;
+  bool non_taxbl_ind = 14;
+  repeated Tax39 tax = 15;
+  double ttl_amt_exclg_tax = 16;
+  double ttl_amt_inclg_tax = 17;
+}
+enum FleetPurchaseType1Code {
+  // Default
+  FLEET_PURCHASE_TYPE1_CODE_UNSPECIFIED = 0;
+  FLEET_PURCHASE_TYPE1_CODE_FUEL = 1;
+  FLEET_PURCHASE_TYPE1_CODE_NONF = 2;
+  FLEET_PURCHASE_TYPE1_CODE_FANF = 3;
+}
+enum FleetServiceType1Code {
+  // Default
+  FLEET_SERVICE_TYPE1_CODE_UNSPECIFIED = 0;
+  FLEET_SERVICE_TYPE1_CODE_SLSV = 1;
+  FLEET_SERVICE_TYPE1_CODE_HSDI = 2;
+  FLEET_SERVICE_TYPE1_CODE_FLSV = 3;
+}
+message FleetSummary2 {
+  Driver2 drvr = 1;
+  Vehicle5 vhcl = 2;
+  PlainCardData21 drvr_or_vhcl_card = 3;
+  double card_fuel_prmpt_cd = 4;
+  string agt_fuel_prmpt_cd = 5;
+  TripInformation1 trip_inf = 6;
+  repeated LocalAmenity1 lcl_amnty = 7;
+  repeated PaymentTransaction141 tx_rltd_data = 8;
+  AdditionalInformation19 addtl_data = 9;
+}
+enum Frequency12Code {
+  // Default
+  FREQUENCY12_CODE_UNSPECIFIED = 0;
+  FREQUENCY12_CODE_YEAR = 1;
+  FREQUENCY12_CODE_DAIL = 2;
+  FREQUENCY12_CODE_FRTN = 3;
+  FREQUENCY12_CODE_MNTH = 4;
+  FREQUENCY12_CODE_QURT = 5;
+  FREQUENCY12_CODE_MIAN = 6;
+  FREQUENCY12_CODE_TEND = 7;
+  FREQUENCY12_CODE_WEEK = 8;
+}
+enum Frequency18Code {
+  // Default
+  FREQUENCY18_CODE_UNSPECIFIED = 0;
+  FREQUENCY18_CODE_YEAR = 1;
+  FREQUENCY18_CODE_DAIL = 2;
+  FREQUENCY18_CODE_FRTN = 3;
+  FREQUENCY18_CODE_MNTH = 4;
+  FREQUENCY18_CODE_QURT = 5;
+  FREQUENCY18_CODE_MIAN = 6;
+  FREQUENCY18_CODE_TEND = 7;
+  FREQUENCY18_CODE_WEEK = 8;
+  FREQUENCY18_CODE_TWWK = 9;
+}
+message FundingService2 {
+  TransferService2 fndg_svc = 1;
+  repeated FundingSource2 fndg_src = 2;
+  ClaimInformation1 clm_inf = 3;
+}
+message FundingSource2 {
+  FundingSourceType2Code src_tp = 1;
+  string othr_src_tp = 2;
+  string ref = 3;
+}
+enum FundingSourceType2Code {
+  // Default
+  FUNDING_SOURCE_TYPE2_CODE_UNSPECIFIED = 0;
+  FUNDING_SOURCE_TYPE2_CODE_LOYL = 1;
+  FUNDING_SOURCE_TYPE2_CODE_OTHN = 2;
+  FUNDING_SOURCE_TYPE2_CODE_OTHP = 3;
+  FUNDING_SOURCE_TYPE2_CODE_SVNG = 4;
+  FUNDING_SOURCE_TYPE2_CODE_UVRL = 5;
+  FUNDING_SOURCE_TYPE2_CODE_CASH = 6;
+  FUNDING_SOURCE_TYPE2_CODE_CRDT = 7;
+  FUNDING_SOURCE_TYPE2_CODE_CDBT = 8;
+  FUNDING_SOURCE_TYPE2_CODE_EPRS = 9;
+  FUNDING_SOURCE_TYPE2_CODE_DBAC = 10;
+  FUNDING_SOURCE_TYPE2_CODE_CURR = 11;
+  FUNDING_SOURCE_TYPE2_CODE_CHQE = 12;
+  FUNDING_SOURCE_TYPE2_CODE_PRPD = 13;
+  FUNDING_SOURCE_TYPE2_CODE_LCDT = 14;
+}
+message GenericIdentification183 {
+  string id = 1;
+  PartyType17Code tp = 2;
+  string othr_tp = 3;
+  PartyType18Code assgnr = 4;
+  string ctry = 5;
+  string shrt_nm = 6;
+}
+message GenericIdentification48 {
+  string id = 1;
+  string vrsn = 2;
+  string issr = 3;
+}
+message GenericInformation1 {
+  string nm = 1;
+  string val = 2;
+}
+enum GoodAndServiceDeliveryChannel1Code {
+  // Default
+  GOOD_AND_SERVICE_DELIVERY_CHANNEL1_CODE_UNSPECIFIED = 0;
+  GOOD_AND_SERVICE_DELIVERY_CHANNEL1_CODE_EDEL = 1;
+  GOOD_AND_SERVICE_DELIVERY_CHANNEL1_CODE_PULC = 2;
+  GOOD_AND_SERVICE_DELIVERY_CHANNEL1_CODE_NDEL = 3;
+  GOOD_AND_SERVICE_DELIVERY_CHANNEL1_CODE_OTHN = 4;
+  GOOD_AND_SERVICE_DELIVERY_CHANNEL1_CODE_OTHP = 5;
+  GOOD_AND_SERVICE_DELIVERY_CHANNEL1_CODE_SCBA = 6;
+  GOOD_AND_SERVICE_DELIVERY_CHANNEL1_CODE_SCSA = 7;
+}
+enum GoodAndServiceDeliverySchedule1Code {
+  // Default
+  GOOD_AND_SERVICE_DELIVERY_SCHEDULE1_CODE_UNSPECIFIED = 0;
+  GOOD_AND_SERVICE_DELIVERY_SCHEDULE1_CODE_OTHN = 1;
+  GOOD_AND_SERVICE_DELIVERY_SCHEDULE1_CODE_OTHP = 2;
+  GOOD_AND_SERVICE_DELIVERY_SCHEDULE1_CODE_ONDL = 3;
+  GOOD_AND_SERVICE_DELIVERY_SCHEDULE1_CODE_SDDL = 4;
+  GOOD_AND_SERVICE_DELIVERY_SCHEDULE1_CODE_TDDL = 5;
+}
+enum GoodsAndServices1Code {
+  // Default
+  GOODS_AND_SERVICES1_CODE_UNSPECIFIED = 0;
+  GOODS_AND_SERVICES1_CODE_ELEC = 1;
+  GOODS_AND_SERVICES1_CODE_PHYS = 2;
+  GOODS_AND_SERVICES1_CODE_ELPH = 3;
+}
+enum GoodsAndServicesSubType1Code {
+  // Default
+  GOODS_AND_SERVICES_SUB_TYPE1_CODE_UNSPECIFIED = 0;
+  GOODS_AND_SERVICES_SUB_TYPE1_CODE_CRCU = 1;
+  GOODS_AND_SERVICES_SUB_TYPE1_CODE_FORX = 2;
+  GOODS_AND_SERVICES_SUB_TYPE1_CODE_OTHN = 3;
+  GOODS_AND_SERVICES_SUB_TYPE1_CODE_OTHP = 4;
+  GOODS_AND_SERVICES_SUB_TYPE1_CODE_SECS = 5;
+}
+message GracePeriod2 {
+  string tm = 1;
+  GracePeriodUnitType1Code unit_tp = 2;
+  string othr_unit_tp = 3;
+  bool cstmr_selctd_grace_prd = 4;
+}
+enum GracePeriodUnitType1Code {
+  // Default
+  GRACE_PERIOD_UNIT_TYPE1_CODE_UNSPECIFIED = 0;
+  GRACE_PERIOD_UNIT_TYPE1_CODE_WEKS = 1;
+  GRACE_PERIOD_UNIT_TYPE1_CODE_PMTS = 2;
+  GRACE_PERIOD_UNIT_TYPE1_CODE_OTHP = 3;
+  GRACE_PERIOD_UNIT_TYPE1_CODE_OTHN = 4;
+  GRACE_PERIOD_UNIT_TYPE1_CODE_MNTH = 5;
+  GRACE_PERIOD_UNIT_TYPE1_CODE_DAYS = 6;
+}
+message Header62 {
+  MessageFunction16Code msg_fctn = 1;
+  string prtcol_vrsn = 2;
+  string xchg_id = 3;
+  string re_trnsmssn_cntr = 4;
+  uint64 cre_dt_tm = 5;
+  BatchManagementInformation1 btch_mgmt_inf = 6;
+  GenericIdentification183 initg_pty = 7;
+  GenericIdentification183 rcpt_pty = 8;
+  repeated AdditionalData1 trac_data = 9;
+  repeated Traceability9 tracblt = 10;
+}
+message HiredVehicle2 {
+  string cpny_tp = 1;
+  string cpny_nm = 2;
+  string tp_of_vhcl = 3;
+  string vhcl_id = 4;
+  string drvr_id = 5;
+  string drvr_tax_id = 6;
+  Destination3 dstn = 7;
+}
+enum ICCFallbackReason1Code {
+  // Default
+  I_C_C_FALLBACK_REASON1_CODE_UNSPECIFIED = 0;
+  I_C_C_FALLBACK_REASON1_CODE_CIIA = 1;
+  I_C_C_FALLBACK_REASON1_CODE_EDIP = 2;
+  I_C_C_FALLBACK_REASON1_CODE_OTHN = 3;
+  I_C_C_FALLBACK_REASON1_CODE_OTHP = 4;
+  I_C_C_FALLBACK_REASON1_CODE_TERI = 5;
+}
+enum Identification3Code {
+  // Default
+  IDENTIFICATION3_CODE_UNSPECIFIED = 0;
+  IDENTIFICATION3_CODE_DRID = 1;
+  IDENTIFICATION3_CODE_NTID = 2;
+  IDENTIFICATION3_CODE_PASS = 3;
+  IDENTIFICATION3_CODE_SSYN = 4;
+  IDENTIFICATION3_CODE_ARNB = 5;
+  IDENTIFICATION3_CODE_OTHP = 6;
+  IDENTIFICATION3_CODE_OTHN = 7;
+  IDENTIFICATION3_CODE_EMAL = 8;
+  IDENTIFICATION3_CODE_PHNB = 9;
+  IDENTIFICATION3_CODE_CUID = 10;
+  IDENTIFICATION3_CODE_TXID = 11;
+  IDENTIFICATION3_CODE_PRXY = 12;
+}
+message Instalment4 {
+  double pmt_seq_nb = 1;
+  repeated Plan2 plan = 2;
+}
+message InstalmentAmountDetails2 {
+  InstalmentAmountDetailsType2Code tp = 1;
+  string othr_tp = 2;
+  string sub_tp = 3;
+  Amount16 amt = 4;
+  double pctg = 5;
+}
+enum InstalmentAmountDetailsType2Code {
+  // Default
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_UNSPECIFIED = 0;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_AFCO = 1;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_EXPN = 2;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_FEES = 3;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_FUNA = 4;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_INSU = 5;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_INTR = 6;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_OTHC = 7;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_OTHN = 8;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_OTHP = 9;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_PRNC = 10;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_RQST = 11;
+  INSTALMENT_AMOUNT_DETAILS_TYPE2_CODE_TAXX = 12;
+}
+enum InstalmentPeriod1Code {
+  // Default
+  INSTALMENT_PERIOD1_CODE_UNSPECIFIED = 0;
+  INSTALMENT_PERIOD1_CODE_MNTH = 1;
+  INSTALMENT_PERIOD1_CODE_ANNU = 2;
+}
+enum InterestRate1Code {
+  // Default
+  INTEREST_RATE1_CODE_UNSPECIFIED = 0;
+  INTEREST_RATE1_CODE_GSRT = 1;
+  INTEREST_RATE1_CODE_NTRT = 2;
+  INTEREST_RATE1_CODE_OTHN = 3;
+  INTEREST_RATE1_CODE_OTHP = 4;
+}
+message InterestRateDetails2 {
+  InterestRate1Code tp = 1;
+  string othr_tp = 2;
+  InstalmentPeriod1Code prd = 3;
+  double rate = 4;
+}
+message Invoice2 {
+  InvoiceSummary2 summry = 1;
+  repeated InvoiceLineItem2 line_itm = 2;
+}
+message InvoiceLineItem2 {
+  uint32 dt = 1;
+  uint32 ordr_dt = 2;
+  string ctrct_nb = 3;
+  uint32 shppg_dt = 4;
+  bool rbllg_ind = 5;
+  bool mdcl_svcs_ind = 6;
+  string ship_to_indstry_cd = 7;
+  string pdct_cd = 8;
+  string pdct_qlfr = 9;
+  string desc = 10;
+  string tp_of_spply = 11;
+  UnitOfMeasure1Code unit_of_measr = 12;
+  string othr_unit_of_measr = 13;
+  double unit_pric = 14;
+  double pdct_qty = 15;
+  Adjustment12 adjstmnt = 16;
+  bool insrnc_ind = 17;
+  double insrnc_amt = 18;
+  repeated Tax39 tax = 19;
+  string unq_v_a_t_invc_ref = 20;
+  double ttl_amt = 21;
+  CreditDebit3Code cdt_dbt = 22;
+  bool zero_cost_to_cstmr_ind = 23;
+  string addtl_data = 24;
+}
+message InvoiceSummary2 {
+  string invc_nb = 1;
+  PartyIdentification259 sellr = 2;
+  PartyIdentification259 buyr = 3;
+  uint32 invc_dt = 4;
+  uint64 invc_cre_dt_tm = 5;
+  string summry_cmmdty_id = 6;
+  double frght_amt = 7;
+  repeated Tax39 tax_ttl = 8;
+  TaxReclaimMethod1Code tax_rclm_mtd = 9;
+  string addtl_data = 10;
+}
+message IssuerAndSerialNumber1 {
+  CertificateIssuer1 issr = 1;
+  bytes srl_nb = 2;
+}
+message JourneyInformation1 {
+  JourneyType1Code jrny_tp = 1;
+  string jrny_data = 2;
+  uint64 dt_and_tm = 3;
+}
+enum JourneyType1Code {
+  // Default
+  JOURNEY_TYPE1_CODE_UNSPECIFIED = 0;
+  JOURNEY_TYPE1_CODE_COAC = 1;
+  JOURNEY_TYPE1_CODE_EARL = 2;
+  JOURNEY_TYPE1_CODE_FLGT = 3;
+  JOURNEY_TYPE1_CODE_LATE = 4;
+  JOURNEY_TYPE1_CODE_ONTM = 5;
+  JOURNEY_TYPE1_CODE_OTHR = 6;
+  JOURNEY_TYPE1_CODE_TRAN = 7;
+  JOURNEY_TYPE1_CODE_VESS = 8;
+}
+message Jurisdiction2 {
+  bool dmst_ind = 1;
+  string dmst_qlfctn = 2;
+}
+message KEK5 {
+  double vrsn = 1;
+  KEKIdentifier2 k_e_k_id = 2;
+  AlgorithmIdentification23 key_ncrptn_algo = 3;
+  bytes ncrptd_key = 4;
+}
+message KEK6 {
+  double vrsn = 1;
+  KEKIdentifier6 k_e_k_id = 2;
+  AlgorithmIdentification28 key_ncrptn_algo = 3;
+  bytes ncrptd_key = 4;
+}
+message KEKIdentifier2 {
+  string key_id = 1;
+  string key_vrsn = 2;
+  double seq_nb = 3;
+  bytes derivtn_id = 4;
+}
+message KEKIdentifier6 {
+  string key_id = 1;
+  string key_vrsn = 2;
+  double seq_nb = 3;
+  bytes derivtn_id = 4;
+}
+message KeyTransport5 {
+  double vrsn = 1;
+  Recipient5Choice rcpt_id = 2;
+  AlgorithmIdentification19 key_ncrptn_algo = 3;
+  bytes ncrptd_key = 4;
+}
+message KeyTransport6 {
+  double vrsn = 1;
+  Recipient5Choice rcpt_id = 2;
+  AlgorithmIdentification27 key_ncrptn_algo = 3;
+  bytes ncrptd_key = 4;
+}
+enum KeyUsage1Code {
+  // Default
+  KEY_USAGE1_CODE_UNSPECIFIED = 0;
+  KEY_USAGE1_CODE_ENCR = 1;
+  KEY_USAGE1_CODE_DCPT = 2;
+  KEY_USAGE1_CODE_DENC = 3;
+  KEY_USAGE1_CODE_DDEC = 4;
+  KEY_USAGE1_CODE_TRNI = 5;
+  KEY_USAGE1_CODE_TRNX = 6;
+  KEY_USAGE1_CODE_MACG = 7;
+  KEY_USAGE1_CODE_MACV = 8;
+  KEY_USAGE1_CODE_SIGG = 9;
+  KEY_USAGE1_CODE_SUGV = 10;
+  KEY_USAGE1_CODE_PINE = 11;
+  KEY_USAGE1_CODE_PIND = 12;
+  KEY_USAGE1_CODE_PINV = 13;
+  KEY_USAGE1_CODE_KEYG = 14;
+  KEY_USAGE1_CODE_KEYI = 15;
+  KEY_USAGE1_CODE_KEYX = 16;
+  KEY_USAGE1_CODE_KEYD = 17;
+}
+enum LegalStructure1Code {
+  // Default
+  LEGAL_STRUCTURE1_CODE_UNSPECIFIED = 0;
+  LEGAL_STRUCTURE1_CODE_STAE = 1;
+  LEGAL_STRUCTURE1_CODE_PVIN = 2;
+  LEGAL_STRUCTURE1_CODE_MUNI = 3;
+  LEGAL_STRUCTURE1_CODE_CNTY = 4;
+  LEGAL_STRUCTURE1_CODE_NATI = 5;
+}
+enum LifeCycleSupport1Code {
+  // Default
+  LIFE_CYCLE_SUPPORT1_CODE_UNSPECIFIED = 0;
+  LIFE_CYCLE_SUPPORT1_CODE_AUTH = 1;
+  LIFE_CYCLE_SUPPORT1_CODE_FINC = 2;
+}
+message LocalAmenity1 {
+  LocationAmenity1Code tp = 1;
+  string othr_tp = 2;
+  bool avlbl_ind = 3;
+}
+message LocalData1 {
+  string lang = 1;
+  string shrt_nm = 2;
+  string lgl_corp_nm = 3;
+  repeated AdditionalData1 addtl_data = 4;
+}
+message LocalData2 {
+  string lang = 1;
+  string nm = 2;
+  Address3 adr = 3;
+  string addtl_ctct_inf = 4;
+  repeated AdditionalData1 addtl_data = 5;
+}
+message LocalData3 {
+  string lang = 1;
+  CardholderName2 nm = 2;
+  Address3 adr = 3;
+  repeated AdditionalData1 addtl_data = 4;
+}
+message LocalData4 {
+  string lang = 1;
+  string shrt_nm = 2;
+  string lgl_corp_nm = 3;
+  string nm_and_lctn = 4;
+  Address3 adr = 5;
+  string addtl_adr_inf = 6;
+  string addtl_ctct_inf = 7;
+  repeated AdditionalData1 addtl_data = 8;
+}
+message LocalData5 {
+  string lang = 1;
+  string cmon_nm = 2;
+  string lgl_corp_nm = 3;
+  Address3 adr = 4;
+  string addtl_adr_inf = 5;
+  repeated AdditionalData1 addtl_data = 6;
+}
+message LocalData7 {
+  string lang = 1;
+  CardholderName2 crdhldr_nm = 2;
+  Address3 adr = 3;
+  repeated AdditionalData1 addtl_data = 4;
+}
+message Location4 {
+  string lctn_cd = 1;
+  string lctn_nm = 2;
+  string desc = 3;
+  Address2 adr = 4;
+  string lcl_tm_zone = 5;
+  string lcl_ccy = 6;
+}
+enum LocationAmenity1Code {
+  // Default
+  LOCATION_AMENITY1_CODE_UNSPECIFIED = 0;
+  LOCATION_AMENITY1_CODE_AADA = 1;
+  LOCATION_AMENITY1_CODE_AFLA = 2;
+  LOCATION_AMENITY1_CODE_AVLA = 3;
+  LOCATION_AMENITY1_CODE_CRWA = 4;
+  LOCATION_AMENITY1_CODE_CVSA = 5;
+  LOCATION_AMENITY1_CODE_DISA = 6;
+  LOCATION_AMENITY1_CODE_EWAA = 7;
+  LOCATION_AMENITY1_CODE_MRLA = 8;
+  LOCATION_AMENITY1_CODE_OTHN = 9;
+  LOCATION_AMENITY1_CODE_OTHP = 10;
+  LOCATION_AMENITY1_CODE_PAPA = 11;
+  LOCATION_AMENITY1_CODE_TSHA = 12;
+  LOCATION_AMENITY1_CODE_TSRA = 13;
+  LOCATION_AMENITY1_CODE_TSSA = 14;
+  LOCATION_AMENITY1_CODE_TFHA = 15;
+  LOCATION_AMENITY1_CODE_VSWA = 16;
+  LOCATION_AMENITY1_CODE_VHPA = 17;
+  LOCATION_AMENITY1_CODE_VMRA = 18;
+}
+message Lodging3 {
+  LodgingSummary2 summry = 1;
+  repeated LodgingLineItem2 line_itm = 2;
+}
+enum LodgingActivity1Code {
+  // Default
+  LODGING_ACTIVITY1_CODE_UNSPECIFIED = 0;
+  LODGING_ACTIVITY1_CODE_APTM = 1;
+  LODGING_ACTIVITY1_CODE_BEBR = 2;
+  LODGING_ACTIVITY1_CODE_COTT = 3;
+  LODGING_ACTIVITY1_CODE_CRUI = 4;
+  LODGING_ACTIVITY1_CODE_HOME = 5;
+  LODGING_ACTIVITY1_CODE_HOST = 6;
+  LODGING_ACTIVITY1_CODE_HOTL = 7;
+  LODGING_ACTIVITY1_CODE_LODG = 8;
+  LODGING_ACTIVITY1_CODE_MOTL = 9;
+  LODGING_ACTIVITY1_CODE_OTHN = 10;
+  LODGING_ACTIVITY1_CODE_OTHP = 11;
+  LODGING_ACTIVITY1_CODE_RESO = 12;
+  LODGING_ACTIVITY1_CODE_ROAB = 13;
+  LODGING_ACTIVITY1_CODE_TOSH = 14;
+}
+message LodgingLineItem2 {
+  uint32 dt = 1;
+  uint64 tm = 2;
+  LodgingService1Code tp = 3;
+  string othr_tp = 4;
+  bool pst_chck_out_ind = 5;
+  CreditDebit3Code cdt_dbt = 6;
+  double unit_amt = 7;
+  string drtn = 8;
+  double sub_ttl_amt = 9;
+  repeated Tax39 tax = 10;
+  string addtl_data = 11;
+}
+message LodgingProperty2 {
+  LodgingActivity1Code tp = 1;
+  string othr_tp = 2;
+  string prstgs_prprty = 3;
+  string nm = 4;
+  PartyIdentification258 id = 5;
+  Location4 lctn = 6;
+  CompanyAssigner2Code assgnr = 7;
+  Contact3 ctct = 8;
+  string ctry = 9;
+  bool fire_sfty_act_ind = 10;
+}
+message LodgingRoom1 {
+  string room_tp = 1;
+  string room_lctn = 2;
+  string bed_tp = 3;
+  string gsts_per_room = 4;
+  string adlts_in_room = 5;
+  string chldrn_in_room = 6;
+  double daly_room_rate = 7;
+}
+enum LodgingService1Code {
+  // Default
+  LODGING_SERVICE1_CODE_UNSPECIFIED = 0;
+  LODGING_SERVICE1_CODE_ACCO = 1;
+  LODGING_SERVICE1_CODE_AUDI = 2;
+  LODGING_SERVICE1_CODE_BANQ = 3;
+  LODGING_SERVICE1_CODE_BREK = 4;
+  LODGING_SERVICE1_CODE_BUSS = 5;
+  LODGING_SERVICE1_CODE_CONC = 6;
+  LODGING_SERVICE1_CODE_EARA = 7;
+  LODGING_SERVICE1_CODE_EARD = 8;
+  LODGING_SERVICE1_CODE_ENTR = 9;
+  LODGING_SERVICE1_CODE_FCAA = 10;
+  LODGING_SERVICE1_CODE_GAME = 11;
+  LODGING_SERVICE1_CODE_GARA = 12;
+  LODGING_SERVICE1_CODE_GIFT = 13;
+  LODGING_SERVICE1_CODE_HEAL = 14;
+  LODGING_SERVICE1_CODE_INTE = 15;
+  LODGING_SERVICE1_CODE_LAUN = 16;
+  LODGING_SERVICE1_CODE_LONG = 17;
+  LODGING_SERVICE1_CODE_MINI = 18;
+  LODGING_SERVICE1_CODE_NOSH = 19;
+  LODGING_SERVICE1_CODE_OTHR = 20;
+  LODGING_SERVICE1_CODE_PARK = 21;
+  LODGING_SERVICE1_CODE_PHON = 22;
+  LODGING_SERVICE1_CODE_REST = 23;
+  LODGING_SERVICE1_CODE_RMSE = 24;
+  LODGING_SERVICE1_CODE_SPAS = 25;
+  LODGING_SERVICE1_CODE_THRD = 26;
+  LODGING_SERVICE1_CODE_TRAN = 27;
+  LODGING_SERVICE1_CODE_VODS = 28;
+}
+message LodgingSummary2 {
+  string folio_nb = 1;
+  LodgingProperty2 prprty = 2;
+  Customer8 cstmr = 3;
+  string nb_of_rooms = 4;
+  repeated LodgingRoom1 room = 5;
+  string drtn = 6;
+  DepartureOrArrival2 arrvl = 7;
+  DepartureOrArrival1 dprture = 8;
+  bool no_show_ind = 9;
+  bool insrnc_ind = 10;
+  double insrnc_amt = 11;
+  repeated Tax39 ttl_tax = 12;
+  double ttl_amt = 13;
+  repeated AuthorisedAmount1 authrsd_amt = 14;
+  string summry_cmmdty_id = 15;
+  repeated LoyaltyProgramme2 llty_prgrmm = 16;
+  string addtl_data = 17;
+}
+message LoyaltyMember2 {
+  CardholderName3 nm = 1;
+  Address2 adr = 2;
+  string id = 3;
+  string mmb_sts = 4;
+  uint32 xprtn_dt = 5;
+  string llty_val = 6;
+  LoyaltyValueType1Code llty_val_tp = 7;
+  string othr_llty_val_tp = 8;
+  string val_to_cdt = 9;
+  string val_to_dbt = 10;
+  string bal = 11;
+}
+message LoyaltyProgramme2 {
+  string prgrmm_tp = 1;
+  string prgm_id = 2;
+  string ptcpt_id = 3;
+}
+message LoyaltyProgramme3 {
+  repeated bool prgrmm_elgblty_ind = 1 [
+    packed = true
+  ];
+  string prgrmm_issr = 2;
+  LoyaltyMember2 llty_mmb = 3;
+}
+enum LoyaltyValueType1Code {
+  // Default
+  LOYALTY_VALUE_TYPE1_CODE_UNSPECIFIED = 0;
+  LOYALTY_VALUE_TYPE1_CODE_MILE = 1;
+  LOYALTY_VALUE_TYPE1_CODE_MONE = 2;
+  LOYALTY_VALUE_TYPE1_CODE_OTHR = 3;
+  LOYALTY_VALUE_TYPE1_CODE_POIN = 4;
+  LOYALTY_VALUE_TYPE1_CODE_PRIV = 5;
+}
+message MACData1 {
+  string ctrl = 1;
+  string key_set_idr = 2;
+  string drvd_inf = 3;
+  string algo = 4;
+  string key_lngth = 5;
+  string key_prtcn = 6;
+  string key_indx = 7;
+  string pddg_mtd = 8;
+  string initlstn_vctr = 9;
+}
+enum MOTO1Code {
+  // Default
+  M_O_T_O1_CODE_UNSPECIFIED = 0;
+  M_O_T_O1_CODE_MAOR = 1;
+  M_O_T_O1_CODE_MOTO = 2;
+  M_O_T_O1_CODE_TPOR = 3;
+}
+message MemoryCharacteristics1 {
+  string id = 1;
+  double ttl_sz = 2;
+  double free_sz = 3;
+  MemoryUnit1Code unit = 4;
+}
+enum MemoryUnit1Code {
+  // Default
+  MEMORY_UNIT1_CODE_UNSPECIFIED = 0;
+  MEMORY_UNIT1_CODE_BYTE = 1;
+  MEMORY_UNIT1_CODE_EXAB = 2;
+  MEMORY_UNIT1_CODE_GIGA = 3;
+  MEMORY_UNIT1_CODE_KILO = 4;
+  MEMORY_UNIT1_CODE_MEGA = 5;
+  MEMORY_UNIT1_CODE_PETA = 6;
+  MEMORY_UNIT1_CODE_TERA = 7;
+}
+enum MessageClass1Code {
+  // Default
+  MESSAGE_CLASS1_CODE_UNSPECIFIED = 0;
+  MESSAGE_CLASS1_CODE_ADDE = 1;
+  MESSAGE_CLASS1_CODE_AMDT = 2;
+  MESSAGE_CLASS1_CODE_AUTH = 3;
+  MESSAGE_CLASS1_CODE_CMGT = 4;
+  MESSAGE_CLASS1_CODE_CBCK = 5;
+  MESSAGE_CLASS1_CODE_FEEC = 6;
+  MESSAGE_CLASS1_CODE_FINL = 7;
+  MESSAGE_CLASS1_CODE_INQY = 8;
+  MESSAGE_CLASS1_CODE_VERI = 9;
+}
+enum MessageError1Code {
+  // Default
+  MESSAGE_ERROR1_CODE_UNSPECIFIED = 0;
+  MESSAGE_ERROR1_CODE_IDEF = 1;
+  MESSAGE_ERROR1_CODE_IDEL = 2;
+  MESSAGE_ERROR1_CODE_IDEV = 3;
+  MESSAGE_ERROR1_CODE_INME = 4;
+  MESSAGE_ERROR1_CODE_INMF = 5;
+  MESSAGE_ERROR1_CODE_MEPE = 6;
+  MESSAGE_ERROR1_CODE_OTHP = 7;
+  MESSAGE_ERROR1_CODE_PRVE = 8;
+  MESSAGE_ERROR1_CODE_RDEM = 9;
+  MESSAGE_ERROR1_CODE_SECU = 10;
+  MESSAGE_ERROR1_CODE_UDFD = 11;
+  MESSAGE_ERROR1_CODE_OTHN = 12;
+  MESSAGE_ERROR1_CODE_ITDE = 13;
+  MESSAGE_ERROR1_CODE_DUME = 14;
+  MESSAGE_ERROR1_CODE_IDWM = 15;
+  MESSAGE_ERROR1_CODE_IDRM = 16;
+  MESSAGE_ERROR1_CODE_IBAT = 17;
+  MESSAGE_ERROR1_CODE_ICOL = 18;
+}
+enum MessageFunction16Code {
+  // Default
+  MESSAGE_FUNCTION16_CODE_UNSPECIFIED = 0;
+  MESSAGE_FUNCTION16_CODE_ADVC = 1;
+  MESSAGE_FUNCTION16_CODE_NOTI = 2;
+  MESSAGE_FUNCTION16_CODE_CAAD = 3;
+  MESSAGE_FUNCTION16_CODE_CANO = 4;
+  MESSAGE_FUNCTION16_CODE_REQU = 5;
+}
+enum OfficialDocumentType1Code {
+  // Default
+  OFFICIAL_DOCUMENT_TYPE1_CODE_UNSPECIFIED = 0;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_ARNU = 1;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_AUTH = 2;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_DIPL = 3;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_DVLC = 4;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_EURO = 5;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_IDEN = 6;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_INTE = 7;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_INPO = 8;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_LZPR = 9;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_OTHN = 10;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_OTHP = 11;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_PASS = 12;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_VISA = 13;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_PERM = 14;
+  OFFICIAL_DOCUMENT_TYPE1_CODE_REFU = 15;
+}
+message OnBoardDiagnostics1 {
+  double ngn_idle_tm = 1;
+  double ngn_ttl_idle_tm = 2;
+  double ngn_hrs = 3;
+  double ngn_ttl_tm = 4;
+  string ngn_ld = 5;
+  string ngn_r_p_m = 6;
+  double ngn_oil_tmprtr = 7;
+  string ngn_oil_prssr = 8;
+  string ngn_oil_life_rmng = 9;
+  string chck_ngn_wrng_sts = 10;
+  string fuel_tank_lvl_start = 11;
+  string fuel_gauge_lvl = 12;
+  double fuel_ecnmy = 13;
+  double rfrgrtn_hrs = 14;
+  double rfrgrtn_tmprtr = 15;
+  double coolnt_tmprtr = 16;
+  string bttry_vltg = 17;
+  string hard_brakg = 18;
+  string hard_acclrtn = 19;
+}
+enum OnLineCapability2Code {
+  // Default
+  ON_LINE_CAPABILITY2_CODE_UNSPECIFIED = 0;
+  ON_LINE_CAPABILITY2_CODE_OFLN = 1;
+  ON_LINE_CAPABILITY2_CODE_ONLN = 2;
+  ON_LINE_CAPABILITY2_CODE_BOTH = 3;
+}
+message OriginalDataElements2 {
+  MessageClass1Code msg_clss = 1;
+  MessageFunction16Code msg_fctn = 2;
+  string tx_tp = 3;
+  string acqrr_id = 4;
+  string sndr_id = 5;
+  uint32 lcl_dt = 6;
+  uint64 lcl_tm = 7;
+  string tm_zone = 8;
+  string tx_ref = 9;
+  uint64 trnsmssn_dt_tm = 10;
+  string sys_trac_audt_nb = 11;
+  string rtrvl_ref_nb = 12;
+  LifeCycleSupport1Code life_cycl_spprt = 13;
+  TransactionLifeCycleIdentification1 life_cycl_trac_id_data = 14;
+  string life_cycl_trac_id_mssng = 15;
+  string acqrr_ref_data = 16;
+  string acqrr_ref_nb = 17;
+  string card_issr_ref_data = 18;
+}
+message OriginalTransaction2 {
+  Environment20 envt = 1;
+  Context12 cntxt = 2;
+  Transaction147 tx = 3;
+  ProcessingResult10 prcg_rslt = 4;
+}
+message OriginalTransactionAmount2 {
+  TypeOfAmount22Code amt_qlfr = 1;
+  TransactionAmount1 tx_amt = 2;
+  Amount15 crdhldr_bllg_amt = 3;
+  Amount15 rcncltn_amt = 4;
+}
+message OriginatorInformation1 {
+  repeated bytes cert = 1;
+}
+enum OutputFormat1Code {
+  // Default
+  OUTPUT_FORMAT1_CODE_UNSPECIFIED = 0;
+  OUTPUT_FORMAT1_CODE_MREF = 1;
+  OUTPUT_FORMAT1_CODE_TEXT = 2;
+  OUTPUT_FORMAT1_CODE_HTML = 3;
+}
+enum OutputFormat4Code {
+  // Default
+  OUTPUT_FORMAT4_CODE_UNSPECIFIED = 0;
+  OUTPUT_FORMAT4_CODE_FLNM = 1;
+  OUTPUT_FORMAT4_CODE_MREF = 2;
+  OUTPUT_FORMAT4_CODE_OTHN = 3;
+  OUTPUT_FORMAT4_CODE_OTHP = 4;
+  OUTPUT_FORMAT4_CODE_SMSI = 5;
+  OUTPUT_FORMAT4_CODE_TEXT = 6;
+  OUTPUT_FORMAT4_CODE_URLI = 7;
+  OUTPUT_FORMAT4_CODE_HTML = 8;
+}
+message PINData1 {
+  string ctrl = 1;
+  string key_set_idr = 2;
+  string drvd_inf = 3;
+  string algo = 4;
+  string key_lngth = 5;
+  string key_prtcn = 6;
+  string key_indx = 7;
+  string p_i_n_blck_frmt = 8;
+  string ncrptd_p_i_n_blck = 9;
+}
+enum PINEntrySecurityCharacteristic1Code {
+  // Default
+  P_I_N_ENTRY_SECURITY_CHARACTERISTIC1_CODE_UNSPECIFIED = 0;
+  P_I_N_ENTRY_SECURITY_CHARACTERISTIC1_CODE_OTHN = 1;
+  P_I_N_ENTRY_SECURITY_CHARACTERISTIC1_CODE_OTHP = 2;
+  P_I_N_ENTRY_SECURITY_CHARACTERISTIC1_CODE_SECS = 3;
+  P_I_N_ENTRY_SECURITY_CHARACTERISTIC1_CODE_SECH = 4;
+}
+enum POICommunicationType2Code {
+  // Default
+  P_O_I_COMMUNICATION_TYPE2_CODE_UNSPECIFIED = 0;
+  P_O_I_COMMUNICATION_TYPE2_CODE_BLTH = 1;
+  P_O_I_COMMUNICATION_TYPE2_CODE_ETHR = 2;
+  P_O_I_COMMUNICATION_TYPE2_CODE_GPRS = 3;
+  P_O_I_COMMUNICATION_TYPE2_CODE_GSMF = 4;
+  P_O_I_COMMUNICATION_TYPE2_CODE_PSTN = 5;
+  P_O_I_COMMUNICATION_TYPE2_CODE_RS_23 = 6;
+  P_O_I_COMMUNICATION_TYPE2_CODE_USBD = 7;
+  P_O_I_COMMUNICATION_TYPE2_CODE_USBH = 8;
+  P_O_I_COMMUNICATION_TYPE2_CODE_WIFI = 9;
+  P_O_I_COMMUNICATION_TYPE2_CODE_WT_2_G = 10;
+  P_O_I_COMMUNICATION_TYPE2_CODE_WT_3_G = 11;
+  P_O_I_COMMUNICATION_TYPE2_CODE_WT_4_G = 12;
+  P_O_I_COMMUNICATION_TYPE2_CODE_WT_5_G = 13;
+}
+enum POIComponentStatus1Code {
+  // Default
+  P_O_I_COMPONENT_STATUS1_CODE_UNSPECIFIED = 0;
+  P_O_I_COMPONENT_STATUS1_CODE_WAIT = 1;
+  P_O_I_COMPONENT_STATUS1_CODE_OUTD = 2;
+  P_O_I_COMPONENT_STATUS1_CODE_OPER = 3;
+  P_O_I_COMPONENT_STATUS1_CODE_DACT = 4;
+}
+enum POIComponentType5Code {
+  // Default
+  P_O_I_COMPONENT_TYPE5_CODE_UNSPECIFIED = 0;
+  P_O_I_COMPONENT_TYPE5_CODE_AQPP = 1;
+  P_O_I_COMPONENT_TYPE5_CODE_APPR = 2;
+  P_O_I_COMPONENT_TYPE5_CODE_TLPR = 3;
+  P_O_I_COMPONENT_TYPE5_CODE_SCPR = 4;
+  P_O_I_COMPONENT_TYPE5_CODE_SERV = 5;
+  P_O_I_COMPONENT_TYPE5_CODE_TERM = 6;
+  P_O_I_COMPONENT_TYPE5_CODE_DVCE = 7;
+  P_O_I_COMPONENT_TYPE5_CODE_SECM = 8;
+  P_O_I_COMPONENT_TYPE5_CODE_APLI = 9;
+  P_O_I_COMPONENT_TYPE5_CODE_EMVK = 10;
+  P_O_I_COMPONENT_TYPE5_CODE_EMVO = 11;
+  P_O_I_COMPONENT_TYPE5_CODE_MDWR = 12;
+  P_O_I_COMPONENT_TYPE5_CODE_DRVR = 13;
+  P_O_I_COMPONENT_TYPE5_CODE_OPST = 14;
+  P_O_I_COMPONENT_TYPE5_CODE_MRPR = 15;
+  P_O_I_COMPONENT_TYPE5_CODE_CRTF = 16;
+  P_O_I_COMPONENT_TYPE5_CODE_TMSP = 17;
+  P_O_I_COMPONENT_TYPE5_CODE_SACP = 18;
+  P_O_I_COMPONENT_TYPE5_CODE_SAPR = 19;
+}
+message Parameter10 {
+  EncryptionFormat2Code ncrptn_frmt = 1;
+  Algorithm16Code dgst_algo = 2;
+  AlgorithmIdentification18 msk_gnrtr_algo = 3;
+}
+message Parameter11 {
+  Algorithm16Code dgst_algo = 1;
+  AlgorithmIdentification12 msk_gnrtr_algo = 2;
+  double salt_lngth = 3;
+  double trlr_fld = 4;
+}
+message Parameter12 {
+  EncryptionFormat2Code ncrptn_frmt = 1;
+  bytes initlstn_vctr = 2;
+  BytePadding1Code b_pddg = 3;
+}
+message Parameter13 {
+  Algorithm20Code dgst_algo = 1;
+  AlgorithmIdentification26 msk_gnrtr_algo = 2;
+}
+message Parameter14 {
+  EncryptionFormat3Code ncrptn_frmt = 1;
+  bytes initlstn_vctr = 2;
+  BytePadding1Code b_pddg = 3;
+}
+message Parameter5 {
+  Algorithm11Code dgst_algo = 1;
+}
+message Parameter7 {
+  bytes initlstn_vctr = 1;
+  BytePadding1Code b_pddg = 2;
+}
+message Parameter9 {
+  Algorithm16Code dgst_algo = 1;
+}
+message PartyIdentification200 {
+  string id = 1;
+  PartyType28Code tp = 2;
+  string othr_tp = 3;
+  PartyType18Code assgnr = 4;
+  string ctry = 5;
+  string shrt_nm = 6;
+}
+message PartyIdentification208 {
+  string tp = 1;
+  string othr_tp = 2;
+  string id = 3;
+  string assgnr = 4;
+}
+message PartyIdentification210 {
+  string prsnl_id = 1;
+  string mplyee_id = 2;
+  string nm = 3;
+  string prfssnl_lvl = 4;
+}
+message PartyIdentification254 {
+  string id = 1;
+  string assgnr = 2;
+  string ctry = 3;
+  string shrt_nm = 4;
+  string lgl_corp_nm = 5;
+  string addtl_id = 6;
+  string nm_and_lctn = 7;
+  Address2 adr = 8;
+  string addtl_adr_inf = 9;
+  string geogc_lctn = 10;
+  string email = 11;
+  string u_r_l_adr = 12;
+  string phne_nb = 13;
+  string cstmr_svc = 14;
+  string addtl_ctct_inf = 15;
+  string tax_regn_id = 16;
+  repeated AdditionalData1 addtl_data = 17;
+  LocalData4 lcl_data = 18;
+  repeated SponsoredMerchant2 spnsrd_mrchnt = 19;
+}
+message PartyIdentification255 {
+  string id = 1;
+  string assgnr = 2;
+  string ctry = 3;
+  string shrt_nm = 4;
+  string lgl_corp_nm = 5;
+  AdditionalData1 addtl_id = 6;
+  string nm_and_lctn = 7;
+  Address2 adr = 8;
+  string addtl_adr_inf = 9;
+  string geogc_lctn = 10;
+  string email = 11;
+  string u_r_l_adr = 12;
+  string phne_nb = 13;
+  string cstmr_svc = 14;
+  string addtl_ctct_inf = 15;
+  string tax_regn_id = 16;
+  repeated AdditionalData1 addtl_data = 17;
+  LocalData4 lcl_data = 18;
+  repeated SponsoredMerchant2 spnsrd_mrchnt = 19;
+}
+message PartyIdentification257 {
+  FinancialInstitution7 f_i = 1;
+  Customer7 cstmr = 2;
+}
+message PartyIdentification258 {
+  string id = 1;
+  string assgnr = 2;
+  string ctry = 3;
+  string shrt_nm = 4;
+  string lgl_corp_nm = 5;
+  AdditionalData1 addtl_id = 6;
+  LocalData1 lcl_data = 7;
+}
+message PartyIdentification259 {
+  string nm = 1;
+  PartyIdentification258 id = 2;
+  Address2 adr = 3;
+  Contact3 ctct = 4;
+  string tax_regn_id = 5;
+  string addtl_inf = 6;
+}
+message PartyIdentification260 {
+  string nm = 1;
+  PartyIdentification258 id = 2;
+  Address2 adr = 3;
+  Contact6 ctct = 4;
+  string instrs = 5;
+}
+message PartyIdentification261 {
+  string cd = 1;
+  string assgnr = 2;
+  string i_a_t_a_cd = 3;
+  string nm = 4;
+  string shrt_nm = 5;
+  Address2 adr = 6;
+  Contact6 ctct = 7;
+}
+message PartyIdentification262 {
+  string id = 1;
+  string assgnr = 2;
+  string ctry = 3;
+  string shrt_nm = 4;
+  string addtl_id = 5;
+  bool frgn_mrchnt = 6;
+  LocalData1 lcl_data = 7;
+}
+message PartyIdentification263 {
+  string id = 1;
+  string assgnr = 2;
+  string ctry = 3;
+  string shrt_nm = 4;
+  string lgl_corp_nm = 5;
+  AdditionalData1 addtl_id = 6;
+  LocalData1 lcl_data = 7;
+}
+enum PartyType17Code {
+  // Default
+  PARTY_TYPE17_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE17_CODE_OTHN = 1;
+  PARTY_TYPE17_CODE_OTHP = 2;
+  PARTY_TYPE17_CODE_ACQR = 3;
+  PARTY_TYPE17_CODE_ACQP = 4;
+  PARTY_TYPE17_CODE_CISS = 5;
+  PARTY_TYPE17_CODE_CISP = 6;
+  PARTY_TYPE17_CODE_AGNT = 7;
+}
+enum PartyType18Code {
+  // Default
+  PARTY_TYPE18_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE18_CODE_ACQR = 1;
+  PARTY_TYPE18_CODE_CISS = 2;
+  PARTY_TYPE18_CODE_CSCH = 3;
+  PARTY_TYPE18_CODE_AGNT = 4;
+}
+enum PartyType20Code {
+  // Default
+  PARTY_TYPE20_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE20_CODE_ACCP = 1;
+  PARTY_TYPE20_CODE_ACQR = 2;
+  PARTY_TYPE20_CODE_CRDH = 3;
+  PARTY_TYPE20_CODE_CISS = 4;
+  PARTY_TYPE20_CODE_AGNT = 5;
+}
+enum PartyType21Code {
+  // Default
+  PARTY_TYPE21_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE21_CODE_ACCP = 1;
+  PARTY_TYPE21_CODE_CRDH = 2;
+  PARTY_TYPE21_CODE_OTHN = 3;
+  PARTY_TYPE21_CODE_OTHP = 4;
+}
+enum PartyType22Code {
+  // Default
+  PARTY_TYPE22_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE22_CODE_CRDH = 1;
+  PARTY_TYPE22_CODE_MERC = 2;
+  PARTY_TYPE22_CODE_OTHN = 3;
+  PARTY_TYPE22_CODE_OTHP = 4;
+  PARTY_TYPE22_CODE_AGNT = 5;
+}
+enum PartyType26Code {
+  // Default
+  PARTY_TYPE26_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE26_CODE_ACCP = 1;
+  PARTY_TYPE26_CODE_ACQR = 2;
+  PARTY_TYPE26_CODE_ICCA = 3;
+  PARTY_TYPE26_CODE_CISS = 4;
+  PARTY_TYPE26_CODE_DLIS = 5;
+  PARTY_TYPE26_CODE_AGNT = 6;
+  PARTY_TYPE26_CODE_OTHN = 7;
+  PARTY_TYPE26_CODE_OTHP = 8;
+}
+enum PartyType28Code {
+  // Default
+  PARTY_TYPE28_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE28_CODE_ACCP = 1;
+  PARTY_TYPE28_CODE_ACQR = 2;
+  PARTY_TYPE28_CODE_AGNT = 3;
+  PARTY_TYPE28_CODE_OTHN = 4;
+  PARTY_TYPE28_CODE_OTHP = 5;
+  PARTY_TYPE28_CODE_WLPR = 6;
+  PARTY_TYPE28_CODE_ISUR = 7;
+}
+enum PartyType32Code {
+  // Default
+  PARTY_TYPE32_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE32_CODE_ACQR = 1;
+  PARTY_TYPE32_CODE_AGNT = 2;
+  PARTY_TYPE32_CODE_ISUR = 3;
+  PARTY_TYPE32_CODE_OTHN = 4;
+  PARTY_TYPE32_CODE_OTHP = 5;
+}
+enum PartyType7Code {
+  // Default
+  PARTY_TYPE7_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE7_CODE_ACQR = 1;
+  PARTY_TYPE7_CODE_ITAG = 2;
+  PARTY_TYPE7_CODE_PCPT = 3;
+  PARTY_TYPE7_CODE_TMGT = 4;
+  PARTY_TYPE7_CODE_SALE = 5;
+}
+enum PartyType9Code {
+  // Default
+  PARTY_TYPE9_CODE_UNSPECIFIED = 0;
+  PARTY_TYPE9_CODE_ACQR = 1;
+  PARTY_TYPE9_CODE_ACQP = 2;
+  PARTY_TYPE9_CODE_CISS = 3;
+  PARTY_TYPE9_CODE_CISP = 4;
+  PARTY_TYPE9_CODE_CSCH = 5;
+  PARTY_TYPE9_CODE_SCHP = 6;
+}
+message PassengerTransport2 {
+  PassengerTransportSummary2 summry = 1;
+  repeated TripLeg2 trip_leg = 2;
+  repeated AncillaryPurchase2 ancllry_purchs = 3;
+  repeated HiredVehicle2 hird_vhcl_dtls = 4;
+}
+message PassengerTransportSummary2 {
+  string doc_nb = 1;
+  ReservationDetails3 rsvatn = 2;
+  string trvl_authstn_cd = 3;
+  string tckt_issr = 4;
+  bool opn_tckt_ind = 5;
+  repeated CustomerReference1 cstmr_ref = 6;
+  repeated Customer8 pssngr = 7;
+  DepartureOrArrival1 dprture = 8;
+  string drtn = 9;
+  bool insrnc_ind = 10;
+  repeated AmountDetails2 ttl_amt = 11;
+  string summry_cmmdty_id = 12;
+  LoyaltyProgramme2 llty_prgrmm = 13;
+  string addtl_data = 14;
+}
+message PaymentTransaction141 {
+  FleetPurchaseType1Code purchs_tp = 1;
+  string summry_cmmdty_id = 2;
+  FleetDiscountTotals1 dscnt_ttl = 3;
+  repeated Tax39 tax_ttl = 4;
+  double ttl_amt = 5;
+}
+enum PeriodUnit2Code {
+  // Default
+  PERIOD_UNIT2_CODE_UNSPECIFIED = 0;
+  PERIOD_UNIT2_CODE_HOUR = 1;
+  PERIOD_UNIT2_CODE_HFDA = 2;
+  PERIOD_UNIT2_CODE_DAYS = 3;
+  PERIOD_UNIT2_CODE_WEEK = 4;
+  PERIOD_UNIT2_CODE_MNTH = 5;
+  PERIOD_UNIT2_CODE_YEAR = 6;
+  PERIOD_UNIT2_CODE_MINU = 7;
+  PERIOD_UNIT2_CODE_OTHR = 8;
+}
+enum PeriodUnit3Code {
+  // Default
+  PERIOD_UNIT3_CODE_UNSPECIFIED = 0;
+  PERIOD_UNIT3_CODE_OTHP = 1;
+  PERIOD_UNIT3_CODE_OTHN = 2;
+  PERIOD_UNIT3_CODE_MNTH = 3;
+  PERIOD_UNIT3_CODE_WEEK = 4;
+  PERIOD_UNIT3_CODE_YEAR = 5;
+  PERIOD_UNIT3_CODE_DAYS = 6;
+  PERIOD_UNIT3_CODE_EXDY = 7;
+}
+message PlainCardData21 {
+  string drvr_or_vhcl_id = 1;
+  repeated AdditionalData1 addtl_card_data = 2;
+}
+message Plan2 {
+  string plan_id = 1;
+  PlanOwner1Code plan_ownr = 2;
+  string othr_plan_ownr = 3;
+  string instlmt_pmt_tp = 4;
+  bool dfrrd_instlmt_ind = 5;
+  Frequency18Code prd_unit = 6;
+  double nb_of_prds = 7;
+  repeated InterestRateDetails2 intrst_rate = 8;
+  uint32 frst_pmt_dt = 9;
+  double frst_amt = 10;
+  double nrml_pmt_amt = 11;
+  double ttl_nb_of_pmts = 12;
+  string instlmt_ccy = 13;
+  GracePeriod2 grace_prd = 14;
+  repeated InstalmentAmountDetails2 amt_dtls = 15;
+  double grd_ttl_amt = 16;
+  repeated AdditionalData1 addtl_data = 17;
+}
+enum PlanOwner1Code {
+  // Default
+  PLAN_OWNER1_CODE_UNSPECIFIED = 0;
+  PLAN_OWNER1_CODE_ACCP = 1;
+  PLAN_OWNER1_CODE_ACQR = 2;
+  PLAN_OWNER1_CODE_ISSR = 3;
+  PLAN_OWNER1_CODE_OTHN = 4;
+  PLAN_OWNER1_CODE_OTHP = 5;
+}
+message PointOfInteractionComponent13 {
+  POIComponentType5Code tp = 1;
+  PointOfInteractionComponentIdentification3 id = 2;
+  PointOfInteractionComponentStatus3 sts = 3;
+  repeated GenericIdentification48 std_cmplc = 4;
+  PointOfInteractionComponentCharacteristics4 chrtcs = 5;
+  repeated PointOfInteractionComponentIdentification3 assmnt = 6;
+}
+message PointOfInteractionComponentCharacteristics4 {
+  repeated MemoryCharacteristics1 mmry = 1;
+  repeated CommunicationCharacteristics3 com = 2;
+  double scty_accs_mdls = 3;
+  double sbcbr_idnty_mdls = 4;
+  repeated CryptographicKey13 scty_elmt = 5;
+}
+message PointOfInteractionComponentIdentification3 {
+  string itm_nb = 1;
+  string prvdr_id = 2;
+  string id = 3;
+  string srl_nb = 4;
+}
+message PointOfInteractionComponentStatus3 {
+  string vrsn_nb = 1;
+  POIComponentStatus1Code sts = 2;
+  uint32 xpry_dt = 3;
+}
+message PointOfServiceContext3 {
+  bool card_pres = 1;
+  bool crdhldr_pres = 2;
+  bool crdhldr_actvtd = 3;
+  bool trnspndr_inittd = 4;
+  bool attndd_ind = 5;
+  string uattndd_lvl_ctgy = 6;
+  bool e_comrc_ind = 7;
+  repeated ECommerceData1 e_comrc_data = 8;
+  MOTO1Code m_o_t_o_cd = 9;
+  bool trnst_ind = 10;
+  bool prtl_apprvl_spprtd = 11;
+  bool delyd_authstn_ind = 12;
+  repeated SecurityCharacteristics1Code scty_chrtcs = 13 [
+    packed = true
+  ];
+  string othr_scty_chrtcs = 14;
+  CardDataReading10Code card_data_ntry_md = 15;
+  string othr_card_data_ntry_md = 16;
+  QRCodePresentmentMode1Code q_r_cd_presntmnt_md = 17;
+  string othr_q_r_cd_presntmnt_md = 18;
+  bool temp_scr_card_data_reusd = 19;
+  string storg_lctn = 20;
+  repeated SpecialConditions1 spcl_conds = 21;
+  repeated AdditionalData1 addtl_data = 22;
+}
+enum PresentationMedium2Code {
+  // Default
+  PRESENTATION_MEDIUM2_CODE_UNSPECIFIED = 0;
+  PRESENTATION_MEDIUM2_CODE_BIOM = 1;
+  PRESENTATION_MEDIUM2_CODE_ELEC = 2;
+  PRESENTATION_MEDIUM2_CODE_PAPR = 3;
+  PRESENTATION_MEDIUM2_CODE_BOTH = 4;
+}
+enum Priority3Code {
+  // Default
+  PRIORITY3_CODE_UNSPECIFIED = 0;
+  PRIORITY3_CODE_URGT = 1;
+  PRIORITY3_CODE_HIGH = 2;
+  PRIORITY3_CODE_NORM = 3;
+}
+message ProcessingResult10 {
+  ApprovalEntity2 rspn_src = 1;
+  ResultData7 rslt_data = 2;
+  string apprvl_cd = 3;
+  ErrorDetails2 err_dtl = 4;
+  ResultData7 orgnl_rslt_data = 5;
+  bool actn_reqrd = 6;
+  repeated Action13 actn = 7;
+  repeated AdditionalAction1 addtl_actn = 8;
+  repeated AdditionalInformation29 addtl_inf = 9;
+}
+message ProcessingResult16 {
+  ApprovalEntity2 rspn_src = 1;
+  ResultData7 rslt_data = 2;
+  string apprvl_cd = 3;
+  ResultData7 orgnl_rslt_data = 4;
+  bool actn_reqrd = 5;
+  repeated Action13 actn = 6;
+  repeated AdditionalAction1 addtl_actn = 7;
+  repeated AdditionalInformation29 addtl_inf = 8;
+}
+message Product7 {
+  string pdct_cd = 1;
+  string summry_cmmdty_id = 2;
+}
+enum ProductCodeType1Code {
+  // Default
+  PRODUCT_CODE_TYPE1_CODE_UNSPECIFIED = 0;
+  PRODUCT_CODE_TYPE1_CODE_EA_13 = 1;
+  PRODUCT_CODE_TYPE1_CODE_EAN_8 = 2;
+  PRODUCT_CODE_TYPE1_CODE_GTIN = 3;
+  PRODUCT_CODE_TYPE1_CODE_OTHR = 4;
+  PRODUCT_CODE_TYPE1_CODE_PLUP = 5;
+  PRODUCT_CODE_TYPE1_CODE_RS_14 = 6;
+  PRODUCT_CODE_TYPE1_CODE_UPCA = 7;
+  PRODUCT_CODE_TYPE1_CODE_UPCE = 8;
+}
+message ProtectedData1 {
+  ContentType3Code cntt_tp = 1;
+  EnvelopedData6 envlpd_data = 2;
+  EncryptedData1 ncrptd_data = 3;
+}
+enum ProtectionMethod1Code {
+  // Default
+  PROTECTION_METHOD1_CODE_UNSPECIFIED = 0;
+  PROTECTION_METHOD1_CODE_OTHN = 1;
+  PROTECTION_METHOD1_CODE_OTHP = 2;
+  PROTECTION_METHOD1_CODE_SELM = 3;
+  PROTECTION_METHOD1_CODE_SNCL = 4;
+  PROTECTION_METHOD1_CODE_SOFT = 5;
+  PROTECTION_METHOD1_CODE_TEEN = 6;
+}
+enum PurchaseIdentifierType1Code {
+  // Default
+  PURCHASE_IDENTIFIER_TYPE1_CODE_UNSPECIFIED = 0;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_CONU = 1;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_CUOR = 2;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_CUPO = 3;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_FONU = 4;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_INNU = 5;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_ORNU = 6;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_OTHN = 7;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_OTHP = 8;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_PRNU = 9;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_PUID = 10;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_RELO = 11;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_REAG = 12;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_RENU = 13;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_RSNU = 14;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_SUOR = 15;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_TINU = 16;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_TRNU = 17;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_SUIN = 18;
+  PURCHASE_IDENTIFIER_TYPE1_CODE_TNID = 19;
+}
+enum QRCodePresentmentMode1Code {
+  // Default
+  Q_R_CODE_PRESENTMENT_MODE1_CODE_UNSPECIFIED = 0;
+  Q_R_CODE_PRESENTMENT_MODE1_CODE_CPMD = 1;
+  Q_R_CODE_PRESENTMENT_MODE1_CODE_OTHN = 2;
+  Q_R_CODE_PRESENTMENT_MODE1_CODE_OTHP = 3;
+  Q_R_CODE_PRESENTMENT_MODE1_CODE_MPMD = 4;
+}
+message RateLock1 {
+  bool reqd_ind = 1;
+  bool elgbl_ind = 2;
+  bool apld_ind = 3;
+}
+enum ReceiptType1Code {
+  // Default
+  RECEIPT_TYPE1_CODE_UNSPECIFIED = 0;
+  RECEIPT_TYPE1_CODE_EMAL = 1;
+  RECEIPT_TYPE1_CODE_OTHR = 2;
+  RECEIPT_TYPE1_CODE_PAPR = 3;
+  RECEIPT_TYPE1_CODE_SMSM = 4;
+  RECEIPT_TYPE1_CODE_URID = 5;
+}
+message Recipient5Choice {
+  IssuerAndSerialNumber1 issr_and_srl_nb = 1;
+  KEKIdentifier2 key_idr = 2;
+}
+message Recipient6Choice {
+  KeyTransport5 key_trnsprt = 1;
+  KEK5 k_e_k = 2;
+  KEKIdentifier2 key_idr = 3;
+}
+message Recipient7Choice {
+  KeyTransport6 key_trnsprt = 1;
+  KEK6 k_e_k = 2;
+  KEKIdentifier6 key_idr = 3;
+}
+message Reconciliation3 {
+  string id = 1;
+  uint32 dt = 2;
+  string chckpt_ref = 3;
+}
+message RelativeDistinguishedName1 {
+  AttributeType1Code attr_tp = 1;
+  string attr_val = 2;
+}
+message RentalDetails2 {
+  string rntl_id = 1;
+  uint64 rntl_dt_tm = 2;
+  ServiceStartEnd2 rntl_start = 3;
+  ServiceStartEnd2 rntl_rtr = 4;
+  repeated PeriodUnit2Code rntl_tm_prd = 5 [
+    packed = true
+  ];
+  string tm_prd_unit = 6;
+  double tm_prd_rate = 7;
+  string ccy = 8;
+}
+message RentalRate1 {
+  PeriodUnit3Code prd = 1;
+  string othr_prd = 2;
+  double rate = 3;
+  string prd_cnt = 4;
+}
+message ReservationDetails3 {
+  string sys = 1;
+  string rsvatn_nb = 2;
+  string orgnl_sys = 3;
+  string orgnl_rsvatn_nb = 4;
+}
+enum Response8Code {
+  // Default
+  RESPONSE8_CODE_UNSPECIFIED = 0;
+  RESPONSE8_CODE_PRCS = 1;
+  RESPONSE8_CODE_UNPR = 2;
+  RESPONSE8_CODE_UNRV = 3;
+  RESPONSE8_CODE_REJT = 4;
+  RESPONSE8_CODE_TECH = 5;
+  RESPONSE8_CODE_OTHN = 6;
+  RESPONSE8_CODE_OTHP = 7;
+}
+message ResultData7 {
+  Response8Code rslt = 1;
+  string othr_rslt = 2;
+  string rslt_dtls = 3;
+  string othr_rslt_dtls = 4;
+  bool temp_scr_card_data_reuse_prtd = 5;
+  repeated AdditionalData1 addtl_rslt_inf = 6;
+}
+enum RiskAssessment1Code {
+  // Default
+  RISK_ASSESSMENT1_CODE_UNSPECIFIED = 0;
+  RISK_ASSESSMENT1_CODE_APPC = 1;
+  RISK_ASSESSMENT1_CODE_APPH = 2;
+  RISK_ASSESSMENT1_CODE_APPU = 3;
+  RISK_ASSESSMENT1_CODE_DONT = 4;
+}
+message RiskAssessment2 {
+  PartyIdentification200 rsk_assmnt_ntty = 1;
+  string rsk_assmnt_tp = 2;
+  bool hgh_rsk_tx = 3;
+  repeated string rsn = 4;
+  string rslt = 5;
+  repeated AdditionalData1 rsk_cond = 6;
+  repeated AdditionalRiskData1 addtl_rsk_data = 7;
+  repeated ActionType8Code rcmmndd_actn = 8 [
+    packed = true
+  ];
+  string othr_rcmmndd_actn = 9;
+  string rcmmndd_actn_dtls = 10;
+}
+message RiskAssessmentDataEntityProvider1 {
+  PartyType28Code tp = 1;
+  string othr_tp = 2;
+}
+message RiskContext2 {
+  repeated RiskInputData1 rsk_inpt_data = 1;
+  repeated RiskAssessment2 rsk_assmnt = 2;
+}
+message RiskInputData1 {
+  RiskAssessmentDataEntityProvider1 ntty = 1;
+  string tp = 2;
+  string val = 3;
+}
+message Sale2 {
+  SaleSummary1 summry = 1;
+  repeated SaleItem3 line_itm = 2;
+}
+message SaleContext8 {
+  string sale_id = 1;
+  string sale_ref_id = 2;
+  string sale_ref_nb = 3;
+  GoodsAndServices1Code goods_and_svcs_tp = 4;
+  GoodsAndServicesSubType1Code good_and_svcs_sub_tp = 5;
+  string good_and_svcs_othr_sub_tp = 6;
+  GoodAndServiceDeliveryChannel1Code good_and_svc_dlvry_chanl = 7;
+  string othr_good_and_svc_dlvry_chanl = 8;
+  GoodAndServiceDeliverySchedule1Code good_and_svc_dlvry_schdl = 9;
+  string othr_good_and_svc_dlvry_schdl = 10;
+  bool splt_pmt_ind = 11;
+  bool rct_req_ind = 12;
+  repeated ReceiptType1Code rct_tp = 13 [
+    packed = true
+  ];
+  string rct_dstn = 14;
+  repeated AdditionalData1 addtl_data = 15;
+}
+message SaleItem3 {
+  string pdct_tp = 1;
+  string pdct_cd = 2;
+  ProductCodeType1Code pdct_cd_tp = 3;
+  string addtl_pdct_cd = 4;
+  string addtl_pdct_cd_tp = 5;
+  double pdct_cd_modfr = 6;
+  string pdct_desc = 7;
+  UnitOfMeasure1Code unit_of_measr = 8;
+  string othr_unit_of_measr = 9;
+  double pdct_qty = 10;
+  double non_adjstd_unit_pric = 11;
+  double non_adjstd_ttl_amt = 12;
+  repeated Adjustment10 adjstmnt = 13;
+  double adjstd_amt = 14;
+  bool insrnc_ind = 15;
+  double insrnc_amt = 16;
+  repeated Tax39 tax = 17;
+  double ttl_amt = 18;
+}
+message SaleSummary1 {
+  string summry_cmmdty_id = 1;
+  LoyaltyProgramme2 llty_prgrmm = 2;
+  repeated Adjustment9 adjstmnt = 3;
+}
+enum SecurityCharacteristics1Code {
+  // Default
+  SECURITY_CHARACTERISTICS1_CODE_UNSPECIFIED = 0;
+  SECURITY_CHARACTERISTICS1_CODE_CETE = 1;
+  SECURITY_CHARACTERISTICS1_CODE_CPTE = 2;
+  SECURITY_CHARACTERISTICS1_CODE_CENC = 3;
+  SECURITY_CHARACTERISTICS1_CODE_CMAC = 4;
+  SECURITY_CHARACTERISTICS1_CODE_ETEE = 5;
+  SECURITY_CHARACTERISTICS1_CODE_METE = 6;
+  SECURITY_CHARACTERISTICS1_CODE_MPTE = 7;
+  SECURITY_CHARACTERISTICS1_CODE_OPNN = 8;
+  SECURITY_CHARACTERISTICS1_CODE_PMAC = 9;
+  SECURITY_CHARACTERISTICS1_CODE_PKIE = 10;
+  SECURITY_CHARACTERISTICS1_CODE_PRAE = 11;
+  SECURITY_CHARACTERISTICS1_CODE_PRAM = 12;
+  SECURITY_CHARACTERISTICS1_CODE_PRVN = 13;
+  SECURITY_CHARACTERISTICS1_CODE_STAM = 14;
+  SECURITY_CHARACTERISTICS1_CODE_APTE = 15;
+  SECURITY_CHARACTERISTICS1_CODE_AETE = 16;
+  SECURITY_CHARACTERISTICS1_CODE_OTHN = 17;
+  SECURITY_CHARACTERISTICS1_CODE_OTHP = 18;
+}
+message ServiceStartEnd2 {
+  string lctn = 1;
+  string lctn_cd = 2;
+  Address2 adr = 3;
+  Contact2 ctct = 4;
+  uint64 dt_and_tm = 5;
+  TimeSegment1Code tm_sgmt = 6;
+  JourneyInformation1 jrny_inf = 7;
+}
+message SettlementReportingEntity1 {
+  string tp = 1;
+  string id = 2;
+}
+message SettlementService3 {
+  SettlementServiceMode1 sttlm_svc_propsd = 1;
+  SettlementServiceMode1 sttlm_svc_apld = 2;
+  SettlementServiceDate2 sttlm_svc_dts = 3;
+  SettlementReportingEntity1 sttlm_rptg_ntty = 4;
+  repeated AdditionalData1 addtl_sttlm_inf = 5;
+}
+message SettlementServiceDate2 {
+  uint32 reqd_sttlm_dt = 1;
+  bool dfrrd_sttlm_ind = 2;
+  uint32 sttlm_dt = 3;
+  uint64 sttlm_tm = 4;
+  string sttlm_prd = 5;
+  uint64 sttlm_cut_off_tm = 6;
+}
+message SettlementServiceMode1 {
+  string tp = 1;
+  string id = 2;
+  string shrt_nm = 3;
+  Priority3Code sttlm_prty = 4;
+}
+message ShippingData2 {
+  string invc_nb = 1;
+  uint64 invc_cre_dt_tm = 2;
+  string svc_dscrptr_cd = 3;
+  double incntiv_amt = 4;
+  double misc_expnss = 5;
+  bool insrnc_ind = 6;
+  double insrnc_amt = 7;
+  double net_amt = 8;
+  repeated Tax39 tax = 9;
+  string summry_cmmdty_id = 10;
+  string nb_of_packgs = 11;
+  repeated ShippingPackage2 packg = 12;
+  string addtl_data = 13;
+}
+message ShippingPackage2 {
+  string trckg_nb = 1;
+  PartyIdentification260 spplr = 2;
+  uint32 pckp_dt = 3;
+  uint64 pckp_tm = 4;
+  DeliveryInformation4 dlvry = 5;
+  UnitOfMeasure2 wght = 6;
+  repeated Product7 pdct = 7;
+  bool insrnc_ind = 8;
+  double insrnc_amt = 9;
+}
+message SignedData5 {
+  double vrsn = 1;
+  repeated AlgorithmIdentification21 dgst_algo = 2;
+  EncapsulatedContent3 ncpsltd_cntt = 3;
+  repeated bytes cert = 4;
+  repeated Signer4 sgnr = 5;
+}
+message Signer4 {
+  double vrsn = 1;
+  Recipient5Choice sgnr_id = 2;
+  AlgorithmIdentification21 dgst_algo = 3;
+  repeated GenericInformation1 sgnd_attrbts = 4;
+  AlgorithmIdentification20 sgntr_algo = 5;
+  bytes sgntr = 6;
+}
+message SpecialConditions1 {
+  string id = 1;
+  string val = 2;
+}
+message SpecialProgrammeDetails1 {
+  string nm = 1;
+  string val = 2;
+}
+message SpecialProgrammeQualification1 {
+  string prgrmm = 1;
+  repeated SpecialProgrammeDetails1 dtl = 2;
+}
+message SponsoredMerchant2 {
+  PartyIdentification262 id = 1;
+  string cmon_nm = 2;
+  string lgl_corp_nm = 3;
+  Address2 adr = 4;
+  string addtl_adr_inf = 5;
+  string geogc_lctn = 6;
+  repeated AdditionalData1 addtl_data = 7;
+  LocalData5 lcl_data = 8;
+}
+enum StorageLocation1Code {
+  // Default
+  STORAGE_LOCATION1_CODE_UNSPECIFIED = 0;
+  STORAGE_LOCATION1_CODE_CAWL = 1;
+  STORAGE_LOCATION1_CODE_DVCE = 2;
+  STORAGE_LOCATION1_CODE_ISWL = 3;
+  STORAGE_LOCATION1_CODE_ONFL = 4;
+  STORAGE_LOCATION1_CODE_OTHN = 5;
+  STORAGE_LOCATION1_CODE_OTHP = 6;
+  STORAGE_LOCATION1_CODE_TPWL = 7;
+}
+message SupplementaryData1 {
+  string plc_and_nm = 1;
+  SupplementaryDataEnvelope1 envlp = 2;
+}
+message SupplementaryDataEnvelope1 {
+  string any = 1;
+}
+message Tax39 {
+  AddendumTaxType2Code tp = 1;
+  string othr_tp = 2;
+  string desc = 3;
+  bool tax_xmptn = 4;
+  string tax_xmpt_rsn = 5;
+  double amt = 6;
+  double rate = 7;
+  bool incl_in_ttl_ind = 8;
+  CreditDebit3Code cdt_dbt = 9;
+}
+enum TaxReclaimMethod1Code {
+  // Default
+  TAX_RECLAIM_METHOD1_CODE_UNSPECIFIED = 0;
+  TAX_RECLAIM_METHOD1_CODE_INPP = 1;
+  TAX_RECLAIM_METHOD1_CODE_INPS = 2;
+  TAX_RECLAIM_METHOD1_CODE_INSU = 3;
+  TAX_RECLAIM_METHOD1_CODE_OTHR = 4;
+}
+message TelecomCallDetails2 {
+  TelephonyCallType1Code tp = 1;
+  string othr_tp = 2;
+  string phne_nb = 3;
+  string city = 4;
+  string stat = 5;
+  string prvc = 6;
+  string ctry = 7;
+}
+message TelecomServices2 {
+  TelecomServicesSummary2 summry = 1;
+  repeated TelecomServicesLineItem2 line_itm = 2;
+}
+message TelecomServicesLineItem2 {
+  uint32 start_dt_tm = 1;
+  string tm_prd = 2;
+  uint64 drtn = 3;
+  TelecomCallDetails2 call_fr = 4;
+  TelecomCallDetails2 call_to = 5;
+  repeated Amount20 chrg = 6;
+  repeated Tax39 ttl_tax = 7;
+  double ttl_amt = 8;
+  string desc = 9;
+  string addtl_data = 10;
+}
+message TelecomServicesSummary2 {
+  Customer6 cstmr = 1;
+  uint32 bllg_stmt_prd_start = 2;
+  uint32 bllg_stmt_prd_end = 3;
+  repeated Amount19 bllg_evt = 4;
+  repeated Tax39 ttl_tax = 5;
+  string addtl_data = 6;
+}
+enum TelephonyCallType1Code {
+  // Default
+  TELEPHONY_CALL_TYPE1_CODE_UNSPECIFIED = 0;
+  TELEPHONY_CALL_TYPE1_CODE_VCML = 1;
+  TELEPHONY_CALL_TYPE1_CODE_TFPC = 2;
+  TELEPHONY_CALL_TYPE1_CODE_PAGE = 3;
+  TELEPHONY_CALL_TYPE1_CODE_OGPC = 4;
+  TELEPHONY_CALL_TYPE1_CODE_OTHP = 5;
+  TELEPHONY_CALL_TYPE1_CODE_OTHN = 6;
+  TELEPHONY_CALL_TYPE1_CODE_OTCL = 7;
+  TELEPHONY_CALL_TYPE1_CODE_ICPC = 8;
+}
+message TemporaryServices2 {
+  TemporaryServicesCompany2 ctrctg_cpny = 1;
+  PartyIdentification210 temp_mplyee = 2;
+  TemporaryServicesJob1 job = 3;
+  bool flat_rate_ind = 4;
+  double dscnt_amt = 5;
+  string summry_cmmdty_id = 6;
+  TemporaryServicesLabor1 labr = 7;
+  repeated Amount13 misc_expnss = 8;
+  double sbttl_amt = 9;
+  repeated Tax39 tax = 10;
+  string addtl_data = 11;
+}
+enum TemporaryServicesCharge1Code {
+  // Default
+  TEMPORARY_SERVICES_CHARGE1_CODE_UNSPECIFIED = 0;
+  TEMPORARY_SERVICES_CHARGE1_CODE_WKND = 1;
+  TEMPORARY_SERVICES_CHARGE1_CODE_REGL = 2;
+  TEMPORARY_SERVICES_CHARGE1_CODE_OVRT = 3;
+  TEMPORARY_SERVICES_CHARGE1_CODE_OTHP = 4;
+  TEMPORARY_SERVICES_CHARGE1_CODE_OTHN = 5;
+  TEMPORARY_SERVICES_CHARGE1_CODE_ONCL = 6;
+  TEMPORARY_SERVICES_CHARGE1_CODE_NITE = 7;
+  TEMPORARY_SERVICES_CHARGE1_CODE_HOLI = 8;
+  TEMPORARY_SERVICES_CHARGE1_CODE_HAZD = 9;
+}
+message TemporaryServicesCompany2 {
+  string nm = 1;
+  string dept = 2;
+  PartyIdentification258 id = 3;
+  string sprvsr = 4;
+}
+message TemporaryServicesJob1 {
+  string job_cd = 1;
+  string desc = 2;
+  uint32 start_dt = 3;
+  string drtn = 4;
+  uint32 end_dt = 5;
+}
+message TemporaryServicesLabor1 {
+  string tm_sheet_nb = 1;
+  string wk_endg = 2;
+  repeated Amount12 chrg = 3;
+}
+message Terminal4 {
+  TerminalIdentification3 termnl_id = 1;
+  TerminalType1Code tp = 2;
+  string othr_tp = 3;
+  Capabilities2 cpblties = 4;
+  TerminalIntegrationCategory1Code termnl_intgtn = 5;
+  string geogc_lctn = 6;
+  bool outdr_ind = 7;
+  bool off_prmiss_ind = 8;
+  bool on_brd_ind = 9;
+  repeated PointOfInteractionComponent13 p_o_i_cmpnt = 10;
+}
+message Terminal5 {
+  TerminalIdentification3 termnl_id = 1;
+  TerminalType1Code tp = 2;
+  string othr_tp = 3;
+  Capabilities2 cpblties = 4;
+  TerminalIntegrationCategory1Code termnl_intgtn = 5;
+  string geogc_lctn = 6;
+  bool outdr_ind = 7;
+  bool off_prmiss_ind = 8;
+  bool on_brd_ind = 9;
+  repeated PointOfInteractionComponent13 p_o_i_cmpnt = 10;
+}
+message TerminalIdentification3 {
+  string id = 1;
+  string assgnr = 2;
+  string ctry = 3;
+  string shrt_nm = 4;
+}
+enum TerminalIntegrationCategory1Code {
+  // Default
+  TERMINAL_INTEGRATION_CATEGORY1_CODE_UNSPECIFIED = 0;
+  TERMINAL_INTEGRATION_CATEGORY1_CODE_MPOI = 1;
+  TERMINAL_INTEGRATION_CATEGORY1_CODE_MSLE = 2;
+  TERMINAL_INTEGRATION_CATEGORY1_CODE_SSLE = 3;
+}
+enum TerminalType1Code {
+  // Default
+  TERMINAL_TYPE1_CODE_UNSPECIFIED = 0;
+  TERMINAL_TYPE1_CODE_ATMT = 1;
+  TERMINAL_TYPE1_CODE_MPOS = 2;
+  TERMINAL_TYPE1_CODE_OTHN = 3;
+  TERMINAL_TYPE1_CODE_OTHP = 4;
+  TERMINAL_TYPE1_CODE_POST = 5;
+}
+message Ticket2 {
+  string tckt_nb = 1;
+  PartyIdentification258 tckt_issr = 2;
+  uint32 tckt_isse_dt = 3;
+  string tckt_isse_lctn = 4;
+  string cnjnctn_tckt_nb = 5;
+  bool rstrctd_tckt_ind = 6;
+  bool opn_tckt_ind = 7;
+  string rstrctns = 8;
+  bool xchgd_tckt_ind = 9;
+  string xchgd_tckt_nb = 10;
+  string rcrd_lctr_nb = 11;
+  ReservationDetails3 rsvatn = 12;
+}
+enum TimeSegment1Code {
+  // Default
+  TIME_SEGMENT1_CODE_UNSPECIFIED = 0;
+  TIME_SEGMENT1_CODE_AMBN = 1;
+  TIME_SEGMENT1_CODE_PMAN = 2;
+}
+message Token2 {
+  string pmt_tkn = 1;
+  string tkn_xpry_dt = 2;
+  string tkn_rqstr_id = 3;
+  string tkn_assrnc_data = 4;
+  string tkn_assrnc_mtd = 5;
+  bool tkn_inittd_ind = 6;
+  StorageLocation1Code storg_lctn = 7;
+  string othr_storg_lctn = 8;
+  ProtectionMethod1Code prtcn_mtd = 9;
+  string othr_prtcn_mtd = 10;
+  repeated AdditionalData1 addtl_data = 11;
+}
+message Traceability9 {
+  GenericIdentification183 rlay_id = 1;
+  uint64 trac_dt_tm_in = 2;
+  uint64 trac_dt_tm_out = 3;
+}
+message Track2Data1Choice {
+  string txt_val = 1;
+  string hex_binry_val = 2;
+}
+message Transaction145 {
+  string tx_tp = 1;
+  string tx_sub_tp = 2;
+  TransactionAttribute2Code tx_attr = 3;
+  string othr_tx_attr = 4;
+  repeated string msg_rsn = 5;
+  repeated string altrn_msg_rsn = 6;
+  string pre_authstn_tm_lmt = 7;
+  repeated AdditionalService2 addtl_svc = 8;
+  bool assoctd_data_ind = 9;
+  string assoctd_data_ref = 10;
+  string assoctd_data_dstn = 11;
+  repeated SpecialProgrammeQualification1 spcl_prgrmm_qlfctn = 12;
+  TransactionIdentification16 tx_id = 13;
+  repeated DisputeData3 dspt_data = 14;
+  TransactionAmounts2 tx_amts = 15;
+  repeated AdditionalAmounts3 addtl_amt = 16;
+  repeated AdditionalFee2 addtl_fee = 17;
+  repeated AdditionalFee2 orgnl_addtl_fee = 18;
+  repeated DepositDetails2 dpst_dtls = 19;
+  FundingService2 fnds_svcs = 20;
+  AccountDetails3 acct_fr = 21;
+  AccountDetails3 acct_to = 22;
+  string tx_desc = 23;
+  repeated AdditionalData1 addtl_data = 24;
+  AdditionalInformation20 addtl_inf = 25;
+}
+message Transaction147 {
+  string tx_tp = 1;
+  string tx_sub_tp = 2;
+  TransactionAttribute2Code tx_attr = 3;
+  string othr_tx_attr = 4;
+  repeated string msg_rsn = 5;
+  repeated string altrn_msg_rsn = 6;
+  string pre_authstn_tm_lmt = 7;
+  repeated AdditionalService2 addtl_svc = 8;
+  string assoctd_data_ref = 9;
+  repeated SpecialProgrammeQualification1 spcl_prgrmm_qlfctn = 10;
+  TransactionIdentification18 tx_id = 11;
+  repeated DisputeData3 dspt_data = 12;
+  TransactionAmounts2 tx_amts = 13;
+  repeated AdditionalAmounts3 addtl_amt = 14;
+  repeated AdditionalFee2 addtl_fee = 15;
+  repeated AdditionalFee2 orgnl_addtl_fee = 16;
+  repeated DepositDetails2 dpst_dtls = 17;
+  FundingService2 fnds_svcs = 18;
+  AccountDetails3 acct_fr = 19;
+  AccountDetails3 acct_to = 20;
+  string tx_desc = 21;
+  repeated AdditionalData1 addtl_data = 22;
+}
+message TransactionAmount1 {
+  double amt = 1;
+  string ccy = 2;
+}
+message TransactionAmounts2 {
+  TypeOfAmount22Code amt_qlfr = 1;
+  TransactionAmount1 tx_amt = 2;
+  Amount15 crdhldr_bllg_amt = 3;
+  Amount15 rcncltn_amt = 4;
+  repeated DetailedAmount22 dtld_amt = 5;
+  OriginalTransactionAmount2 orgnl_tx_amts = 6;
+}
+enum TransactionAttribute2Code {
+  // Default
+  TRANSACTION_ATTRIBUTE2_CODE_UNSPECIFIED = 0;
+  TRANSACTION_ATTRIBUTE2_CODE_AGGR = 1;
+  TRANSACTION_ATTRIBUTE2_CODE_CADB = 2;
+  TRANSACTION_ATTRIBUTE2_CODE_CPLT = 3;
+  TRANSACTION_ATTRIBUTE2_CODE_DBRC = 4;
+  TRANSACTION_ATTRIBUTE2_CODE_DBRP = 5;
+  TRANSACTION_ATTRIBUTE2_CODE_DFRD = 6;
+  TRANSACTION_ATTRIBUTE2_CODE_INCR = 7;
+  TRANSACTION_ATTRIBUTE2_CODE_FRCP = 8;
+  TRANSACTION_ATTRIBUTE2_CODE_INST = 9;
+  TRANSACTION_ATTRIBUTE2_CODE_OTHN = 10;
+  TRANSACTION_ATTRIBUTE2_CODE_OTHP = 11;
+  TRANSACTION_ATTRIBUTE2_CODE_PAUT = 12;
+  TRANSACTION_ATTRIBUTE2_CODE_PACP = 13;
+  TRANSACTION_ATTRIBUTE2_CODE_PPYT = 14;
+  TRANSACTION_ATTRIBUTE2_CODE_RCPT = 15;
+  TRANSACTION_ATTRIBUTE2_CODE_SUBR = 16;
+  TRANSACTION_ATTRIBUTE2_CODE_TPUP = 17;
+  TRANSACTION_ATTRIBUTE2_CODE_UCOF = 18;
+}
+message TransactionContext7 {
+  string mrchnt_ctgy_cd = 1;
+  string mrchnt_ctgy_spcfc_data = 2;
+  bool cstmr_cnsnt = 3;
+  bool p_i_n_pad_inprtv = 4;
+  bool p_i_n_ntry_bpss_ind = 5;
+  bool i_c_c_fllbck_ind = 6;
+  ICCFallbackReason1Code i_c_c_fllbck_rsn_cd = 7;
+  string othr_i_c_c_fllbck_rsn_cd = 8;
+  bool mgntc_strp_fllbck_ind = 9;
+  bool late_presntmnt_ind = 10;
+  bool fnl_authstn_ind = 11;
+  bool dfrrd_dlvry_ind = 12;
+  bool prtl_shipmnt_ind = 13;
+  bool delyd_chrgs_ind = 14;
+  bool no_show_ind = 15;
+  bool reauthstn_ind = 16;
+  bool re_submissn_ind = 17;
+  TransactionInitiator1Code tx_initr = 18;
+  bool authntcn_outg_ind = 19;
+  CardProgramme2 card_prgrmm = 20;
+  Jurisdiction2 jursdctn = 21;
+  SettlementService3 sttlm_svc = 22;
+  Reconciliation3 rcncltn = 23;
+  repeated ExchangeRateInformation2 xchg_rate_inf = 24;
+  uint32 captr_dt = 25;
+  uint32 dt_antcptd = 26;
+  repeated AdditionalData1 addtl_data = 27;
+}
+message TransactionIdentification16 {
+  uint32 lcl_dt = 1;
+  uint64 lcl_tm = 2;
+  string tm_zone = 3;
+  string tx_ref = 4;
+  uint64 trnsmssn_dt_tm = 5;
+  string sys_trac_audt_nb = 6;
+  string rtrvl_ref_nb = 7;
+  LifeCycleSupport1Code life_cycl_spprt = 8;
+  TransactionLifeCycleIdentification1 life_cycl_trac_id_data = 9;
+  string life_cycl_trac_id_mssng = 10;
+  string acqrr_ref_data = 11;
+  string acqrr_ref_nb = 12;
+  string card_issr_ref_data = 13;
+  OriginalDataElements2 orgnl_data_elmts = 14;
+}
+message TransactionIdentification18 {
+  uint32 lcl_dt = 1;
+  uint64 lcl_tm = 2;
+  string tm_zone = 3;
+  string tx_ref = 4;
+  uint64 trnsmssn_dt_tm = 5;
+  string sys_trac_audt_nb = 6;
+  string rtrvl_ref_nb = 7;
+  string life_cycl_spprt_ind = 8;
+  TransactionLifeCycleIdentification1 life_cycl_trac_id_data = 9;
+  string life_cycl_trac_id_mssng = 10;
+  string acqrr_ref_data = 11;
+  string acqrr_ref_nb = 12;
+  string card_issr_ref_data = 13;
+}
+enum TransactionInitiator1Code {
+  // Default
+  TRANSACTION_INITIATOR1_CODE_UNSPECIFIED = 0;
+  TRANSACTION_INITIATOR1_CODE_MERC = 1;
+  TRANSACTION_INITIATOR1_CODE_CUST = 2;
+}
+message TransactionLifeCycleIdentification1 {
+  string id = 1;
+  string authstn_seq_nb = 2;
+  string presntmnt_seq_nb = 3;
+  string presntmnt_seq_cnt = 4;
+  string authntcn_tkn = 5;
+}
+message TransferService2 {
+  string svc_prvdr = 1;
+  string svc_nm = 2;
+  string ref = 3;
+  string biz_purp = 4;
+  string desc = 5;
+}
+enum TransportType1Code {
+  // Default
+  TRANSPORT_TYPE1_CODE_UNSPECIFIED = 0;
+  TRANSPORT_TYPE1_CODE_AIRR = 1;
+  TRANSPORT_TYPE1_CODE_BUSS = 2;
+  TRANSPORT_TYPE1_CODE_OTHN = 3;
+  TRANSPORT_TYPE1_CODE_OTHP = 4;
+  TRANSPORT_TYPE1_CODE_RAIL = 5;
+  TRANSPORT_TYPE1_CODE_SHIP = 6;
+}
+message TravelAgency3 {
+  PartyIdentification261 cpny = 1;
+  repeated TravelAgencyPackage1 trvl_packg = 2;
+  string addtl_data = 3;
+}
+message TravelAgencyPackage1 {
+  string rsvatn_nb = 1;
+  string trvl_packg_tp = 2;
+  string nb_in_pty = 3;
+  repeated CustomerReference1 cstmr_ref = 4;
+  string data_src = 5;
+  string dlvry_ordr_nb = 6;
+  string cdt_card_slip_nb = 7;
+  bool insrnc_ind = 8;
+  double insrnc_amt = 9;
+  double fee = 10;
+}
+message TravelDocument2 {
+  OfficialDocumentType1Code tp = 1;
+  PresentationMedium2Code form = 2;
+  string id = 3;
+  string assgnr = 4;
+  uint32 issnc_dt = 5;
+  uint32 xprtn_dt = 6;
+  string ctry = 7;
+}
+message TripInformation1 {
+  string trip_nb = 1;
+  string job_nb = 2;
+  string work_ordr = 3;
+  string invc_nb = 4;
+  string bllg_id = 5;
+  string ctrl_nb = 6;
+  string dlvry_tckt_nb = 7;
+}
+message TripLeg2 {
+  string seq_nb = 1;
+  Ticket2 tckt = 2;
+  repeated DocumentReference1 doc = 3;
+  string prcdr_ref = 4;
+  TransportType1Code trnsprt_tp = 5;
+  string othr_trnsprt_tp = 6;
+  string cmmdty_cd = 7;
+  CarrierIdentification1 crrier = 8;
+  string route_nb = 9;
+  string svc_clss = 10;
+  DepartureOrArrival1 dprture = 11;
+  DepartureOrArrival1 arrvl = 12;
+  string drtn = 13;
+  bool stop_over_ind = 14;
+  string non_drct_route_cd = 15;
+  string fair_bsis_cd = 16;
+  bool insrnc_ind = 17;
+  repeated AmountDetails2 trip_leg_amt = 18;
+  string cdt_rsn_cd = 19;
+  string prcdr_id = 20;
+  LoyaltyProgramme2 llty_prgrmm = 21;
+  string addtl_data = 22;
+}
+enum TypeOfAmount19Code {
+  // Default
+  TYPE_OF_AMOUNT19_CODE_UNSPECIFIED = 0;
+  TYPE_OF_AMOUNT19_CODE_CONN = 1;
+  TYPE_OF_AMOUNT19_CODE_INSU = 2;
+  TYPE_OF_AMOUNT19_CODE_LNDS = 3;
+  TYPE_OF_AMOUNT19_CODE_MISC = 4;
+  TYPE_OF_AMOUNT19_CODE_OTHN = 5;
+  TYPE_OF_AMOUNT19_CODE_OTHP = 6;
+  TYPE_OF_AMOUNT19_CODE_USGE = 7;
+}
+enum TypeOfAmount20Code {
+  // Default
+  TYPE_OF_AMOUNT20_CODE_UNSPECIFIED = 0;
+  TYPE_OF_AMOUNT20_CODE_AMTH = 1;
+  TYPE_OF_AMOUNT20_CODE_BAGG = 2;
+  TYPE_OF_AMOUNT20_CODE_CARG = 3;
+  TYPE_OF_AMOUNT20_CODE_CHTC = 4;
+  TYPE_OF_AMOUNT20_CODE_CLUB = 5;
+  TYPE_OF_AMOUNT20_CODE_DUTY = 6;
+  TYPE_OF_AMOUNT20_CODE_EXTK = 7;
+  TYPE_OF_AMOUNT20_CODE_EXTF = 8;
+  TYPE_OF_AMOUNT20_CODE_EXTR = 9;
+  TYPE_OF_AMOUNT20_CODE_FARE = 10;
+  TYPE_OF_AMOUNT20_CODE_FDBV = 11;
+  TYPE_OF_AMOUNT20_CODE_INSU = 12;
+  TYPE_OF_AMOUNT20_CODE_MISC = 13;
+  TYPE_OF_AMOUNT20_CODE_OTHN = 14;
+  TYPE_OF_AMOUNT20_CODE_OTHP = 15;
+  TYPE_OF_AMOUNT20_CODE_PETC = 16;
+  TYPE_OF_AMOUNT20_CODE_PHNE = 17;
+  TYPE_OF_AMOUNT20_CODE_PRPY = 18;
+  TYPE_OF_AMOUNT20_CODE_TOTL = 19;
+  TYPE_OF_AMOUNT20_CODE_TOUR = 20;
+  TYPE_OF_AMOUNT20_CODE_UPGD = 21;
+  TYPE_OF_AMOUNT20_CODE_TKDL = 22;
+}
+enum TypeOfAmount21Code {
+  // Default
+  TYPE_OF_AMOUNT21_CODE_UNSPECIFIED = 0;
+  TYPE_OF_AMOUNT21_CODE_INTC = 1;
+  TYPE_OF_AMOUNT21_CODE_FEEP = 2;
+  TYPE_OF_AMOUNT21_CODE_OTHN = 3;
+  TYPE_OF_AMOUNT21_CODE_OTHP = 4;
+  TYPE_OF_AMOUNT21_CODE_FEEA = 5;
+  TYPE_OF_AMOUNT21_CODE_CSIF = 6;
+  TYPE_OF_AMOUNT21_CODE_MXIF = 7;
+  TYPE_OF_AMOUNT21_CODE_MNIF = 8;
+}
+enum TypeOfAmount22Code {
+  // Default
+  TYPE_OF_AMOUNT22_CODE_UNSPECIFIED = 0;
+  TYPE_OF_AMOUNT22_CODE_ACTL = 1;
+  TYPE_OF_AMOUNT22_CODE_DFLT = 2;
+  TYPE_OF_AMOUNT22_CODE_DPST = 3;
+  TYPE_OF_AMOUNT22_CODE_ESTM = 4;
+  TYPE_OF_AMOUNT22_CODE_MAXI = 5;
+  TYPE_OF_AMOUNT22_CODE_PRXY = 6;
+  TYPE_OF_AMOUNT22_CODE_RESD = 7;
+}
+enum UnitOfMeasure10Code {
+  // Default
+  UNIT_OF_MEASURE10_CODE_UNSPECIFIED = 0;
+  UNIT_OF_MEASURE10_CODE_KMET = 1;
+  UNIT_OF_MEASURE10_CODE_MILE = 2;
+}
+enum UnitOfMeasure1Code {
+  // Default
+  UNIT_OF_MEASURE1_CODE_UNSPECIFIED = 0;
+  UNIT_OF_MEASURE1_CODE_PIEC = 1;
+  UNIT_OF_MEASURE1_CODE_TONS = 2;
+  UNIT_OF_MEASURE1_CODE_FOOT = 3;
+  UNIT_OF_MEASURE1_CODE_GBGA = 4;
+  UNIT_OF_MEASURE1_CODE_USGA = 5;
+  UNIT_OF_MEASURE1_CODE_GRAM = 6;
+  UNIT_OF_MEASURE1_CODE_INCH = 7;
+  UNIT_OF_MEASURE1_CODE_KILO = 8;
+  UNIT_OF_MEASURE1_CODE_PUND = 9;
+  UNIT_OF_MEASURE1_CODE_METR = 10;
+  UNIT_OF_MEASURE1_CODE_CMET = 11;
+  UNIT_OF_MEASURE1_CODE_MMET = 12;
+  UNIT_OF_MEASURE1_CODE_LITR = 13;
+  UNIT_OF_MEASURE1_CODE_CELI = 14;
+  UNIT_OF_MEASURE1_CODE_MILI = 15;
+  UNIT_OF_MEASURE1_CODE_GBOU = 16;
+  UNIT_OF_MEASURE1_CODE_USOU = 17;
+  UNIT_OF_MEASURE1_CODE_GBQA = 18;
+  UNIT_OF_MEASURE1_CODE_USQA = 19;
+  UNIT_OF_MEASURE1_CODE_GBPI = 20;
+  UNIT_OF_MEASURE1_CODE_USPI = 21;
+  UNIT_OF_MEASURE1_CODE_MILE = 22;
+  UNIT_OF_MEASURE1_CODE_KMET = 23;
+  UNIT_OF_MEASURE1_CODE_YARD = 24;
+  UNIT_OF_MEASURE1_CODE_SQKI = 25;
+  UNIT_OF_MEASURE1_CODE_HECT = 26;
+  UNIT_OF_MEASURE1_CODE_ARES = 27;
+  UNIT_OF_MEASURE1_CODE_SMET = 28;
+  UNIT_OF_MEASURE1_CODE_SCMT = 29;
+  UNIT_OF_MEASURE1_CODE_SMIL = 30;
+  UNIT_OF_MEASURE1_CODE_SQMI = 31;
+  UNIT_OF_MEASURE1_CODE_SQYA = 32;
+  UNIT_OF_MEASURE1_CODE_SQFO = 33;
+  UNIT_OF_MEASURE1_CODE_SQIN = 34;
+  UNIT_OF_MEASURE1_CODE_ACRE = 35;
+}
+message UnitOfMeasure2 {
+  UnitOfMeasure1Code unit_of_measr = 1;
+  string othr_unit_of_measr = 2;
+  double nb_of_units = 3;
+}
+enum UserInterface1Code {
+  // Default
+  USER_INTERFACE1_CODE_UNSPECIFIED = 0;
+  USER_INTERFACE1_CODE_CDSP = 1;
+  USER_INTERFACE1_CODE_CRCP = 2;
+  USER_INTERFACE1_CODE_MDSP = 3;
+  USER_INTERFACE1_CODE_MRCP = 4;
+}
+enum UserInterface6Code {
+  // Default
+  USER_INTERFACE6_CODE_UNSPECIFIED = 0;
+  USER_INTERFACE6_CODE_CDSP = 1;
+  USER_INTERFACE6_CODE_CRCP = 2;
+  USER_INTERFACE6_CODE_MDSP = 3;
+  USER_INTERFACE6_CODE_MRCP = 4;
+  USER_INTERFACE6_CODE_CRDO = 5;
+  USER_INTERFACE6_CODE_FILE = 6;
+  USER_INTERFACE6_CODE_CHAP = 7;
+  USER_INTERFACE6_CODE_MRAP = 8;
+  USER_INTERFACE6_CODE_MRIN = 9;
+}
+message Vehicle2 {
+  string tp = 1;
+  CardDataReading5Code ntry_md = 2;
+  string data = 3;
+}
+message Vehicle4 {
+  string clss = 1;
+  string make = 2;
+  string mdl = 3;
+  string regn_nb = 4;
+}
+message Vehicle5 {
+  string vhcl_nb = 1;
+  string vhcl_id_nb = 2;
+  string fleet_nb = 3;
+  string sub_fleet_nb = 4;
+  string unit_nb = 5;
+  string trlr_nb = 6;
+  string vhcl_tag = 7;
+  CardDataReading5Code vhcl_tag_ntry_md = 8;
+  bool rplcmnt_vhcl_ind = 9;
+  double odmtr = 10;
+  double hbmtr = 11;
+  string mntnc_id = 12;
+  OnBoardDiagnostics1 on_brd_dgnstcs = 13;
+  repeated Vehicle2 addtl_vhcl_data = 14;
+}
+message VehicleRentalAgreement2 {
+  string agrmt_nb = 1;
+  bool adjstd_ind = 2;
+  Address2 rntl_lctn = 3;
+  repeated Address2 pckp_lctn = 4;
+  uint32 chck_out_dt = 5;
+  uint64 chck_out_tm = 6;
+  Address2 rtr_lctn = 7;
+  uint32 chck_in_dt = 8;
+  uint64 chck_in_tm = 9;
+  string drtn = 10;
+  Vehicle4 vhcl_clss_dtls = 11;
+  Distance1 trvl_dstnc = 12;
+  repeated RentalRate1 rntl_rate = 13;
+  RentalDetails2 rntl_dtls = 14;
+  string vhcl_regn_nb = 15;
+  bool insrnc_ind = 16;
+  repeated Amount18 addtl_amt = 17;
+  repeated Tax39 estmtd_tax = 18;
+  repeated Discount3 dscnt_prgrmm = 19;
+  repeated LoyaltyProgramme3 llty_prgrmm = 20;
+}
+message VehicleRentalCompany2 {
+  string nm = 1;
+  PartyIdentification258 id = 2;
+  Address2 adr = 3;
+  Contact3 ctct = 4;
+  string ctry = 5;
+  CarRentalActivity1Code tp = 6;
+  string othr_tp = 7;
+}
+message VehicleRentalCustomer2 {
+  string rntr_nm = 1;
+  string corp_nm = 2;
+  string corp_idr = 3;
+  CustomerAssigner1Code assgnr = 4;
+  repeated DriverInParty2 pmry_drvr = 5;
+  repeated DriverInParty2 addtl_drvr = 6;
+  LoyaltyProgramme2 llty_prgrmm = 7;
+}
+message VehicleRentalInvoice2 {
+  bool no_show_ind = 1;
+  bool adjstd_ind = 2;
+  Address2 rtr_lctn = 3;
+  uint32 chck_out_dt = 4;
+  uint64 chck_out_tm = 5;
+  uint32 chck_in_dt = 6;
+  uint64 chck_in_tm = 7;
+  string drtn = 8;
+  Vehicle4 vhcl_clss_invcd = 9;
+  Vehicle4 vhcl_clss_prvdd = 10;
+  Distance1 trvl_dstnc = 11;
+  repeated RentalRate1 rntl_chrg = 12;
+  string summry_cmmdty_id = 13;
+  bool insrnc_ind = 14;
+  repeated Amount18 addtl_amt = 15;
+  repeated Tax39 tax = 16;
+}
+message VehicleRentalService2 {
+  VehicleRentalCompany2 vhcl_rntl_cpny = 1;
+  VehicleRentalCustomer2 cstmr = 2;
+  string summry_cmmdty_id = 3;
+  VehicleRentalAgreement2 rntl_agrmt = 4;
+  VehicleRentalInvoice2 rntl_invc = 5;
+  string addtl_data = 6;
+}
+enum Verification3Code {
+  // Default
+  VERIFICATION3_CODE_UNSPECIFIED = 0;
+  VERIFICATION3_CODE_FAIL = 1;
+  VERIFICATION3_CODE_FUTA = 2;
+  VERIFICATION3_CODE_MISS = 3;
+  VERIFICATION3_CODE_NOSP = 4;
+  VERIFICATION3_CODE_NOVF = 5;
+  VERIFICATION3_CODE_OTHN = 6;
+  VERIFICATION3_CODE_OTHP = 7;
+  VERIFICATION3_CODE_PART = 8;
+  VERIFICATION3_CODE_SUCC = 9;
+  VERIFICATION3_CODE_ERRR = 10;
+}
+message Verification4 {
+  string tp = 1;
+  string othr_tp = 2;
+  string sub_tp = 3;
+  string addtl_inf = 4;
+  repeated VerificationResult2 vrfctn_rslt = 5;
+}
+message Verification5 {
+  string tp = 1;
+  string othr_tp = 2;
+  string sub_tp = 3;
+  repeated VerificationInformation1 vrfctn_inf = 4;
+  repeated VerificationResult2 vrfctn_rslt = 5;
+}
+enum VerificationEntity2Code {
+  // Default
+  VERIFICATION_ENTITY2_CODE_UNSPECIFIED = 0;
+  VERIFICATION_ENTITY2_CODE_MERC = 1;
+  VERIFICATION_ENTITY2_CODE_ACQR = 2;
+  VERIFICATION_ENTITY2_CODE_AGNT = 3;
+  VERIFICATION_ENTITY2_CODE_ISSR = 4;
+  VERIFICATION_ENTITY2_CODE_OTHN = 5;
+  VERIFICATION_ENTITY2_CODE_OTHP = 6;
+  VERIFICATION_ENTITY2_CODE_CDAD = 7;
+  VERIFICATION_ENTITY2_CODE_ICCA = 8;
+}
+message VerificationInformation1 {
+  string tp = 1;
+  VerificationValue1Choice val = 2;
+  repeated string rsn = 3;
+  uint64 dt_tm = 4;
+  uint32 vldty_end_dt = 5;
+  uint64 vldty_end_tm = 6;
+}
+message VerificationResult2 {
+  string tp = 1;
+  VerificationEntity2Code ntty = 2;
+  string othr_ntty = 3;
+  Verification3Code rslt = 4;
+  string othr_rslt = 5;
+  repeated AdditionalData1 rslt_dtls = 6;
+}
+message VerificationValue1Choice {
+  string txt_val = 1;
+  bytes binry_val = 2;
+  string hex_binry_val = 3;
+  PINData1 p_i_n_data = 4;
+}
+message Wallet2 {
+  PartyIdentification258 prvdr = 1;
+  double p_a_n_age = 2;
+  double usr_acct_age = 3;
+  double wllt_acct_age = 4;
+  double days_snc_last_actvty = 5;
+  double actvty = 6;
+  Frequency12Code actvty_intrvl = 7;
+  double last_wllt_chng = 8;
+  double sspd_crds = 9;
+  string wllt_acct_ctry = 10;
+  CardDataReading9Code card_data_ntry_md = 11;
+  string othr_card_data_ntry_md = 12;
+  double wllt_acct_email_age = 13;
+  RiskAssessment1Code wllt_prvdr_rsk_assmnt = 14;
+  string wllt_prvdr_rsk_assmnt_mdl_vrsn = 15;
+  double wllt_prvdr_phne_score = 16;
+  double wllt_prvdr_dvc_score = 17;
+  double wllt_prvdr_acct_score = 18;
+  repeated AdditionalData1 addtl_data = 19;
+}

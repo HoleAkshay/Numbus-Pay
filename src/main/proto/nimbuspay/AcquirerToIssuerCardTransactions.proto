@@ -1,0 +1,13 @@
+syntax = "proto3";
+package nimbuspay;
+
+option java_package = "proto.nimbuspay";
+option java_multiple_files = true;
+
+import "nimbuspay/financialinitiationv03/financialinitiationv03.proto";
+import "nimbuspay/financialresponsev03/financialresponsev03.proto";
+
+service AcquirerToIssuerCardTransactionsService {
+  rpc financial(stream  financialinitiationv03.Document)
+      returns(stream financialresponsev03.Document); //Bi-directional streaming
+}
