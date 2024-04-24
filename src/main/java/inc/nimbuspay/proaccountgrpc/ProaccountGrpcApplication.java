@@ -33,4 +33,11 @@ public class ProaccountGrpcApplication {
 		server.awaitTermination();
 	}
 
+	// @Bean
+	// public Server grpcServer(AcquirerToIssuerCardTransactionsServiceController service) {
+	// 	return ServerBuilder.forPort(9090)
+	// 			.addService(service)
+	// 			.build();
+	// }
+
 }
