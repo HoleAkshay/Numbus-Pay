@@ -46,6 +46,14 @@ jobs:
     - name: Push Docker image
       run: docker push akshayhole59/proaccount-grpc:latest
 
+    - name: Start Docker containers
+      run: |
+        docker-compose -f docker-compose.yml up -d
+
+    - name: Wait for containers to start
+      run: sleep 30s
+
+
 
   dependency-submission:
 
