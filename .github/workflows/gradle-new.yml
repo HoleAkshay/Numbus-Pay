@@ -47,11 +47,10 @@ jobs:
       run: docker push akshayhole59/proaccount-grpc:latest
 
     - name: Start Docker containers
-      run: |
-        docker-compose up -f 
+      run:  docker-compose up 
 
     - name: Wait for containers to start
-      run: sleep 30s
+      run: sleep 10s
 
 
 
