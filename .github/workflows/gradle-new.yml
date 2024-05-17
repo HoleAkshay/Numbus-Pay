@@ -2,7 +2,7 @@
 name: Java CI with Gradle New Workflow new
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
   
 jobs:
   build:
